@@ -60,3 +60,15 @@ body {
     font-size: 1.5vw;
     text-shadow: 1px 1px 2px grey;
 }
+
+#score-board {
+    text-align: center;
+    color: white;
+    font-family: "Owswald", sans-serif;
+    font-size: 1.5vw;
+    text-transform: uppercase;
+}
+
+.deck {
+    margin: 13% 0;
+}

@@ -9,7 +9,7 @@ let cardSuits = ["Hearts", "Clubs", "Diamonds", "Spades"];
 let cardValues = ["Ace", "King", "Queen", "Jack", "Ten", "Nine", "Eight", "Seven",
 "Six", "Five", "Four", "Three", "Two", "One"];
 
-/* function titleScreen() {
+function titleScreen() {
     document.getElementById('game-container').style.display = 'none';
     
 }; 
@@ -19,5 +19,9 @@ function mainGame() {
     document.getElementById("title-container").style.display = 'none';
 }
 
-mainGame();
-*/
+function instructions() {
+    document.getElementById("instructions").style.display = "none";
+}
+
+instructions();
+titleScreen();
