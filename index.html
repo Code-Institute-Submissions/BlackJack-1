@@ -9,51 +9,34 @@
 </head>
 <body>
 
-<!--Title Screen container-->
-<div id="title-container">
-    <h2 class="header-text">Let's Play Blackjack</h2>
-        <!--Start and Instructions buttons-->
-    <div id="title-btns-container">
-        <input type="button" id="btnStart" class="title-btn" value="Start Game">
-        <input type="button" id="btnInstruct" class="title-btn" value="How to Play">
+    <!--Hide Title Container while working through main game section-->
+    <!-- 
+    <div id="title-container">
+        <h2 class="header-text">Let's Play Blackjack</h2>
+        <div id="title-btns-container">
+            <input type="button" id="btnStart" class="title-btn" value="Start Game">
+            <input type="button" id="btnInstruct" class="title-btn" value="How to Play">
+        </div>
     </div>
-</div>
+    -->
 
-<!--Game board container-->
-<div id="game-container">
-    <!--game buttons-->
-    <div id="game-btns-container">
-        <input type="button" class="game-btn" id="btnReset" value="Reset Game">
-        <input type="button" class="game-btn" id="btnHit" value="Hit Me">
-        <input type="button" class="game-btn" id="btnStay" value="Stay">
-    </div>
 
-    <!--Title cards for dealer-->
-    <div class="name-dealer">
-        <h4>Dealer</h4>
-    </div>
-    <div id="cards-dealer"></div>
 
-    <!--Title cards for the player-->
-    <div class="name-player">
-        <h4>Player</h4>
-    </div>
-    <div id="cards-player"></div>
-
-    <!--Sum of the value of dealer and player hands-->
-    <div id="sum" class="dealer-sum"></div>
-    <div id="sum" class="player-sum"></div>
-    
-    <!--If the Dealer wins-->
-    <div class="dealer-wins">
-        <h2>Dealer Wins</h2>
+    <!--Score Board section-->
+    <div id="score-board">
+        <div id="dealer-score" class="score">Dealer Score: <span>0</span></div>
+        <div id="split-board"></div>
+        <div id="player-score" class="score">Player Score: <span>0</span></div>
     </div>
 
-    <!--If the Player wins-->
-    <div class="player-wins">
-        <h2>Player Wins</h2>
+    <!--Bottom menu section-->
+    <div id="lower-third">
+        <div id="players-status">Press Deal to Start Game</div>
+
+        <button id="deal" class="game-btn" type="button">Deal</button>
+        <button id="hit" class="game-btn" type="button" disabled>Hit</button>
+        <button id="stand" class="game-btn" type="button" disabled>Stand</button>
     </div>
-</div>
 
 <script type="text/javascript" src="assets/scripts/game.js"></script>
 </body>
