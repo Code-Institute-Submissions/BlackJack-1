@@ -14,7 +14,6 @@ function titleScreen() {
     
 }; 
 
-
 function mainGame() {
     document.getElementById("title-container").style.display = 'none';
 }
@@ -24,4 +23,4 @@ function instructions() {
 }
 
 instructions();
-titleScreen();
+mainGame();
