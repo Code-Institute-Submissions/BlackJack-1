@@ -43,9 +43,9 @@ body {
 /* Modal Content/Box */
 .modal-content {
   margin: 10% auto; /* 15% from the top and centered */
-  padding: 20px; 
-}
+  padding: 2% 32%; 
 
+}
 
 /* The Close Button */
 .close {
