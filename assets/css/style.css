@@ -1,26 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 
-html {
-    height: 100%;
+html, 
+body {
+    height: 90%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     background-image: linear-gradient(to left bottom, #004909, #006511, #01821a, #01a023, #00bf2c);
     background-size: cover;
-    min-height: 100%;
+
 }
 
 /* ----- counter for the users hand ---- */ 
 
 #game-container {
     margin: 2% auto;
+    width: 100%;
+}
+
+.counter-row {
+    height: 100%;
 }
 
 #card-counter {
-    border: 1px black solid;
+    
     text-align: center;
     color: white;
     font-family: "Owswald", sans-serif;
     text-transform: uppercase; 
 }
 
+.deck {
+    margin: 40%;
+}
+
+/* --------- Scoring table ----- */ 
+#score-table {
+    position: absolute;
+    bottom: 0px;
+    margin: 0;
+    padding: 0;
+}

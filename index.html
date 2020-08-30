@@ -14,12 +14,12 @@
     <div id="game-container" class="container">
         <!-- Counter for the player and dealers hand -->
         <!--- Responsive Grid system used with Bootstrap -->
-        <div class="row">
-            <div id="card-counter" class="col-sm">
+        <div class="row counter-row">
+            <div id="card-counter" class="col-sm-6">
                 <div id="dealers-hand" class="counter">Dealer: <span>0</span></div>
                 <div class="deck"></div>
             </div>
-            <div id="card-counter" class="col-sm">
+            <div id="card-counter" class="col-sm-6">
                 <div id="players-hand" class="counter">Player: <span>0</span></div>
                 <div class="deck"></div>
             </div>
@@ -38,7 +38,7 @@
 
 <!-- Keep track of users wins and losses -->
 <!-- Bootstrap created table -->
-<table class="table table-dark">
+<table id="score-table" class="table table-dark">
     <thead>
       <tr>
         <th scope="col">Wins</th>
