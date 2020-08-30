@@ -1,5 +1,12 @@
 // Define variables
 
+let userWinScore = 0;
+let userLoseScore = 0;
+let userDrawScore = 0;
+let userWins = document.getElementById("wins");
+let userLosses = document.getElementById("losses");
+let userDraw = document.getElementById("draw")
+
 //title screen variables
 let headerText = document.getElementById("header-text");
 let btnStartGame = document.getElementById("btnStart")
@@ -114,4 +121,29 @@ function cardValues(card) {
         case 'Nine': return 9;
         defult: return 10;
     }
+}
+
+//Function for when user wins
+function win() {
+    //user score will go up by one when user wins
+    userWinScore++;
+    //change the HTML text to reflect new userscore
+    userWins.innerHTML = userWinScore;
+}
+
+
+//Function for when user losses
+function lose() {
+    //user losses score will go up by one when user losses
+    userLoseScore++;
+    //change the HTML text to reflect new userscore
+    userLosses.innerHTML = userLoseScore;
+}
+
+//Function for when user and dealer draw
+function draw(){
+    //draw score will go up by one when score is tied
+    userDrawScore++;
+    //change the HTML to reflect the new draw score
+    userDraw.innerHTML = userDrawScore;
 }
