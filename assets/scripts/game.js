@@ -48,6 +48,8 @@ btnStartGame.addEventListener('click', function() {
     titleContainer.style.display = 'none';
     mainGame.style.display = 'block';
     footer.style.display = 'block';
+
+    deck = creatNewDeck();
 })
 
 // Get the modal
@@ -72,3 +74,25 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+//Function to create a new deck
+function createNewDeck () {
+    //Create a new array for the deck
+    let deck = [];
+    //Loop through the suits array
+    for (let i = 0; i < suits.length; i++) {
+        //Loop through the values array
+        for(let j = 0; j < values.length; j++) {
+            //Define card to be the suits and values
+            let card = {
+                suit: suits[i],
+                value: values[j]
+            }
+            //Push the card results to create a new deck array
+            deck.push(card);
+        }
+    }
+    //Call function to create a new deck when a new game starts
+    return deck;
+}
+
