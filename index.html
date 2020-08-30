@@ -4,60 +4,48 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
-    <!--Link Stylesheet-->
     <link rel="stylesheet" href="assets/css/style.css">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <!--Container for the title screen prior to game-->
-    <div id="title-container">
-        <h2 class="header-text">Let's Play Blackjack</h2>
-        <div id="title-btns-container">
-            <input type="button" id="btnStart" class="title-btn" value="Start Game">
-            <input type="button" id="btnInstruct" class="title-btn" value="How to Play">
-        </div>
-        <!--Instructions section-->
-        <div id="instructions">
-            <h2>How to Play Blackjack</h2>
-            <p>The goal of blackjack is to beat the dealer's and without going voer 21.</p>
-            <h4>Card Values</h4>
-            <ol>
-                <li>Face cards are worth 10.</li>
-                <li>Aces are worth 1 or 11, whichever makes a better hand</li>
-                <li>Numerical value of a card is its value</li>
-            </ol>
-            <h4>How to play</h4>
-            <ol>
-                <li>Press <strong>Hit</strong> to as for another card</li>
-                <li>Press <strong>Stay</strong> to hold your current total and end your turn.</li>
-                <li>If you go over 21 you bust</li>
-            </ol>
-        </div>
-    </div>
+ 
+<!-- Counter for the player and dealers hand -->
+<div id="card-counter">
+    <div id="dealers-hand" class="counter">Dealer: <span>0</span></div>
+    <div class="deck"></div>
+    <div id="players-hand" class="counter">Player: <span>0</span></div>
+    <div class="deck"></div>
+</div>
 
-    
-    <!--Container for the main game-->
-    <div id="game-container">
-        <!--Score Board section-->
-        <div id="score-board">
-            <div id="dealer-score" class="score">Dealer Score: <span>0</span></div>
-            <div id="dealers-hand" class="deck"></div>
-            <!-- border to split the table -->
-            <div id="split-board"></div>
-            <div id="player-score" class="score">Player Score: <span>0</span></div>
-            <div id="players-hand" class="deck"></div>
-        </div>
+<!-- Players control panel -->
+<div id="controls">
+    <div id="next-steps">Press Deal to Start Game</div>
 
+    <!--- Bootstrap buttons -->
+    <button type="button" class="btn btn-primary">Deal</button>
+    <button type="button" class="btn btn-success" disabled>Hit</button>
+    <button type="button" class="btn btn-warning" disabled>Stay</button>
+</div>
 
-        <!-- Bottom menu section --> 
-        <div id="lower-third">
-            <div id="players-status">Press Deal to Start Game</div>
+<!-- Keep track of users wins and losses -->
+<!-- Bootstrap created table -->
+<table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">Wins</th>
+        <th scope="col">Losses</th>
+        <th scope="col">Draws</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span id="wins">0</span></td>
+        <td><span id="los">0</span></td>
+        <td><span id="wins">0</span></td>
+      </tr>
+    </tbody>
+  </table>
 
-            <button id="deal" class="game-btn" type="button">Deal</button>
-            <button id="hit" class="game-btn" type="button" disabled>Hit</button>
-            <button id="stand" class="game-btn" type="button" disabled>Stay</button>
-        </div>
-    </div>
-
-<script type="text/javascript" src="assets/scripts/game.js"></script>
 </body>
 </html>
