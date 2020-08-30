@@ -44,11 +44,15 @@ let playerCards = [];
 let dealerScore = 0;
 let playerScore = 0;
 
+//When the Start Game button is clicked this will take user to main game page
 btnStartGame.addEventListener('click', function() {
     titleContainer.style.display = 'none';
     mainGame.style.display = 'block';
     footer.style.display = 'block';
+})
 
+//When the Deal button is clicked, this will initalise the game
+dealButton.addEventListener('click', function() {
     deck = creatNewDeck();
 })
 
