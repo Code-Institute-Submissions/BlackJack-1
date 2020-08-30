@@ -4,29 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blackjack</title>
+    <!-- CSS Stylesheet -->
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
- 
-<!-- Counter for the player and dealers hand -->
-<div id="card-counter">
-    <div id="dealers-hand" class="counter">Dealer: <span>0</span></div>
-    <div class="deck"></div>
-    <div id="players-hand" class="counter">Player: <span>0</span></div>
-    <div class="deck"></div>
-</div>
+    <!-- Container for the main game -->
+    <div id="game-container" class="container">
+        <!-- Counter for the player and dealers hand -->
+        <!--- Responsive Grid system used with Bootstrap -->
+        <div class="row">
+            <div id="card-counter" class="col-sm">
+                <div id="dealers-hand" class="counter">Dealer: <span>0</span></div>
+                <div class="deck"></div>
+            </div>
+            <div id="card-counter" class="col-sm">
+                <div id="players-hand" class="counter">Player: <span>0</span></div>
+                <div class="deck"></div>
+            </div>
+        </div>
+    </div>
 
-<!-- Players control panel -->
-<div id="controls">
-    <div id="next-steps">Press Deal to Start Game</div>
+    <!-- Players control panel -->
+    <div id="controls">
+        <div id="next-steps">Press Deal to Start Game</div>
 
-    <!--- Bootstrap buttons -->
-    <button type="button" class="btn btn-primary">Deal</button>
-    <button type="button" class="btn btn-success" disabled>Hit</button>
-    <button type="button" class="btn btn-warning" disabled>Stay</button>
-</div>
+        <!--- Bootstrap buttons -->
+        <button type="button" class="btn btn-primary">Deal</button>
+        <button type="button" class="btn btn-success" disabled>Hit</button>
+        <button type="button" class="btn btn-warning" disabled>Stay</button>
+    </div>
 
 <!-- Keep track of users wins and losses -->
 <!-- Bootstrap created table -->
