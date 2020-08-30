@@ -19,6 +19,7 @@ let stayButton = document.getElementById("btnStay");
 let scoreTable = document.getElementById("score-table");
 
 let instructionsPopUp = document.getElementById("instructions-box");
+let footer = document.getElementById('footer');
 
 //define card values 
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
@@ -27,10 +28,12 @@ let values = ['Ace', 'King', 'Queen', 'Jack',
   'Five', 'Four', 'Three', 'Two', 'One'
 ];
 
-//hidden elements
+// hidden elements
 mainGame.style.display = 'none';
-controls.style.display = 'none';
-scoreTable.style.display = 'none';
+footer.style.display = 'none';
+
+
+//titleContainer.style.display = 'none';
 
 //reset game properties
 let startGame = false;
@@ -43,7 +46,8 @@ let playerScore = 0;
 
 btnStartGame.addEventListener('click', function() {
     titleContainer.style.display = 'none';
-
+    mainGame.style.display = 'block';
+    footer.style.display = 'block';
 })
 
 // Get the modal
