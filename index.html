@@ -14,27 +14,33 @@
 <body>
  
     <div id="title-container">
-        <h2 class="header-text">Let's Play Blackjack</h2>
+        <h2 id="header-text">Let's Play Blackjack</h2>
         <div id="title-btns-container">
-            <input type="button" id="btnStart" class="title-btn" value="Start Game">
-            <input type="button" id="btnInstruct" class="title-btn" value="How to Play">
+            <button type="button" id="btnStart" class="btn btn-info btn-lg">Start Game</button>
+            <button type="button" id="btnInstruct" class="btn btn-info btn-lg">How to Play</button>
         </div>
-
-        <div id="instructions">
-            <h2>How to Play Blackjack</h2>
-            <p>The goal of blackjack is to beat the dealer's and without going voer 21.</p>
-            <h4>Card Values</h4>
-            <ol>
-                <li>Face cards are worth 10.</li>
-                <li>Aces are worth 1 or 11, whichever makes a better hand</li>
-                <li>Numerical value of a card is its value</li>
-            </ol>
-            <h4>How to play</h4>
-            <ol>
-                <li>Press <strong>Hit</strong> to as for another card</li>
-                <li>Press <strong>Stay</strong> to hold your current total and end your turn.</li>
-                <li>If you go over 21 you bust</li>
-            </ol>
+    
+        <!-- The Modal -->
+        <!--- Structure of modal take from https://www.w3schools.com/howto/howto_css_modals.asp -->
+        <div id="myModal" class="modal">
+            <!-- Modal content -->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-h2">How to Play Blackjack</h2>
+                <p>The goal of blackjack is to beat the dealer's hand without going over 21.</p>
+                <h4>Card Values</h4>
+                <ol>
+                    <li>Face cards are worth 10</li>
+                    <li>Aces are worth 1 or 11, whichever makes a better hand</li>
+                    <li>Numerical value of a card is its value</li>
+                </ol>
+                <h4>How to play</h4>
+                <ol>
+                    <li>Press <strong>Hit</strong> to deal another card</li>
+                    <li>Press <strong>Stay</strong> to hold your current total and end your turn.</li>
+                    <li>If you go over 21 you bust</li>
+                </ol>
+            </div>
         </div>
     </div>
 
@@ -60,9 +66,9 @@
         <div id="controls">
             <div id="next-steps">Press Deal to Start Game</div>
             <!--- Bootstrap buttons -->
-            <button type="button" class="btn btn-primary btn-lg">Deal</button>
-            <button type="button" class="btn btn-success btn-lg" disabled>Hit</button>
-            <button type="button" class="btn btn-warning btn-lg" disabled>Stay</button>
+            <button type="button" id="btnDeal" class="btn btn-primary btn-lg">Deal</button>
+            <button type="button" id="btnHit" class="btn btn-success btn-lg" disabled>Hit</button>
+            <button type="button" id="btnStay" class="btn btn-warning btn-lg" disabled>Stay</button>
         </div>
 
         <!-- Keep track of users wins and losses -->
