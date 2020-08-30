@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
+
 <body>
     <!-- Container for the main game -->
     <div id="game-container" class="container">
@@ -26,34 +28,36 @@
         </div>
     </div>
 
-    <!-- Players control panel -->
-    <div id="controls">
-        <div id="next-steps">Press Deal to Start Game</div>
+  <!--- Fixed Footer Section -->
+    <div id="footer">
+        <!-- Players control panel -->
+        <div id="controls">
+            <div id="next-steps">Press Deal to Start Game</div>
+            <!--- Bootstrap buttons -->
+            <button type="button" class="btn btn-primary btn-lg">Deal</button>
+            <button type="button" class="btn btn-success btn-lg" disabled>Hit</button>
+            <button type="button" class="btn btn-warning btn-lg" disabled>Stay</button>
+        </div>
 
-        <!--- Bootstrap buttons -->
-        <button type="button" class="btn btn-primary">Deal</button>
-        <button type="button" class="btn btn-success" disabled>Hit</button>
-        <button type="button" class="btn btn-warning" disabled>Stay</button>
+        <!-- Keep track of users wins and losses -->
+        <!-- Bootstrap created table -->
+        <table id="score-table" class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Wins</th>
+                    <th scope="col">Losses</th>
+                    <th scope="col">Draws</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span id="wins">0</span></td>
+                    <td><span id="los">0</span></td>
+                    <td><span id="wins">0</span></td>
+                </tr>
+            </tbody>
+        </table>
     </div>
-
-<!-- Keep track of users wins and losses -->
-<!-- Bootstrap created table -->
-<table id="score-table" class="table table-dark">
-    <thead>
-      <tr>
-        <th scope="col">Wins</th>
-        <th scope="col">Losses</th>
-        <th scope="col">Draws</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span id="wins">0</span></td>
-        <td><span id="los">0</span></td>
-        <td><span id="wins">0</span></td>
-      </tr>
-    </tbody>
-  </table>
 
 </body>
 </html>

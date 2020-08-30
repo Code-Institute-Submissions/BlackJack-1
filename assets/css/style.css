@@ -2,15 +2,8 @@
 
 html, 
 body {
-    height: 90%;
     margin: 0;
     padding: 0;
-}
-
-body {
-    background-image: linear-gradient(to left bottom, #004909, #006511, #01821a, #01a023, #00bf2c);
-    background-size: cover;
-
 }
 
 /* ----- counter for the users hand ---- */ 
@@ -24,22 +17,33 @@ body {
     height: 100%;
 }
 
-#card-counter {
-    
+#card-counter { 
     text-align: center;
-    color: white;
     font-family: "Owswald", sans-serif;
     text-transform: uppercase; 
 }
 
 .deck {
-    margin: 40%;
+    margin: 50%;
 }
 
-/* --------- Scoring table ----- */ 
-#score-table {
+/* --- Footer --- */ 
+
+#footer {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-end;
     position: absolute;
     bottom: 0px;
+}
+
+#score-table {
     margin: 0;
-    padding: 0;
+}
+
+#controls {
+    margin: 2% 0;
 }
