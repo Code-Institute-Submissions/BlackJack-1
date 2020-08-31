@@ -107,6 +107,8 @@ function createNewDeck () {
     return deck;
 }
 
+console.log(createNewDeck());
+
 //defining the card numerical values
 function cardValues(card) {
     switch(card.value){
@@ -147,3 +149,22 @@ function draw(){
     //change the HTML to reflect the new draw score
     userDraw.innerHTML = userDrawScore;
 }
+
+
+
+//FUNCTION - get the current total of the hand 
+//define variables of totalValue set to 0
+//create if statement 
+
+//Ace's will have a value of 1
+//if the currentTotal is less than 11 then value of Ace will be 11
+
+//the values of the King Queen and Jack are set to 10
+
+
+//ON CLICK FUNCTION - when dealButton is clicked
+//The game will begin - a pair of cards will be dealt to player and dealer 
+//Both HIt and Stay buttons will be active 
+
+
+//ON CLICK FUNCTION - when stayButton is clicked 
