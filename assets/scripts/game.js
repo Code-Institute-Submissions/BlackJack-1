@@ -32,7 +32,7 @@ let footer = document.getElementById('footer');
 let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
 let values = ['Ace', 'King', 'Queen', 'Jack',
   'Ten', 'Nine', 'Eight', 'Seven', 'Six',
-  'Five', 'Four', 'Three', 'Two', 'One'
+  'Five', 'Four', 'Three', 'Two'
 ];
 
 // hidden elements
