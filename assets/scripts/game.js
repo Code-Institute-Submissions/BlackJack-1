@@ -42,27 +42,32 @@ window.onclick = function(event) {
   }
 }
 
-//Function to create a new deck
-function createNewDeck () {
-    //Create a new array for the deck
-    let deck = [];
-    //Loop through the suits array
-    for (let i = 0; i < suits.length; i++) {
-        //Loop through the values array
-        for(let j = 0; j < values.length; j++) {
-            //Define card to be the suits and values
-            let card = {
-                suit: suits[i],
-                value: values[j]
-            }
-            //Push the card results to create a new deck array
-            deck.push(card);
-        }
+//Resource that helped with shuffle https://www.programiz.com/javascript/examples/shuffle-card
+//Empty array to contain the cards
+let deck = [];
+
+//Create a deck of cards
+for(let i = 0; i < suits.length; i++) {
+    for(let j = 0; j < values.length; j++) {
+        let card = {
+            Value: values[j],
+            Suit: suits[i]
+        }; deck.push(card);
     }
-    //Call function to create a new deck when a new game starts
-    return deck;
 }
 
+//Shuffle the cards
+for (let i = deck.length - 1; i > 0; i--) {
+    let j = Math.floor(Math.random() * i);
+    let temp = deck[i];
+    deck[i] = deck[j];
+    deck[j] = temp;
+}
+
+//Display the first 5 cards
+for (let i = 0; i < 5; i++){
+    console.log(`${deck[i].Value} of ${deck[i].Suit}`);
+}
 
 
 
