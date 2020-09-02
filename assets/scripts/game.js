@@ -1,10 +1,13 @@
 
 //define card values 
-let suits = ['Hearts', 'Clubs', 'Diamonds', 'Spades'];
+//removed suits values as they were not needed in order for game logic to work
+//easier to work through the logic of the game
 let values = ['Ace', 'King', 'Queen', 'Jack',
   'Ten', 'Nine', 'Eight', 'Seven', 'Six',
   'Five', 'Four', 'Three', 'Two'
 ];
+
+
 
 let dealButton = document.getElementById("btnDeal");
 let hitButton = document.getElementById("btnHit");
@@ -33,10 +36,8 @@ hitButton.addEventListener('click', function() {
 
 function createDeck() {
   let deck = []
-  for (let i = 0; i < suits.length; i++) {
     for (let j = 0; j < values.length; j++) {
       let card = {
-        suit: suits[i],
         value: values[j]
       }
       deck.push(card);
