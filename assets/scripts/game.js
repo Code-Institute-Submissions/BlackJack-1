@@ -1,51 +1,27 @@
 
-//define card values 
+//define card values and mapped values to correct numberical values
 //removed suits values as they were not needed in order for game logic to work
 //easier to work through the logic of the game
-let values = ['Ace', 'King', 'Queen', 'Jack',
-  'Ten', 'Nine', 'Eight', 'Seven', 'Six',
-  'Five', 'Four', 'Three', 'Two'
-];
+let cards = {
+  'cardValues': ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two'],
+  'cardMapping': {'Ace': [1, 11], 'King': 10, 'Queen': 10, 'Jack': 10, 'Ten': 10, 'Nine': 9, 'Eight': 8, 'Seven': 7, 'Six': 6, 'Five': 5, 'Four': 4, 'Three': 3, 'Two': 2},
+};
 
-
-
-
-document.querySelector("#btnDeal").addEventListener('click', dealButton());
+//query select the control buttons
 document.querySelector('#btnHit').addEventListener('click', hitButton())
 document.querySelector('#btnStay').addEventListener('click', stayButton());
+document.querySelector("#btnDeal").addEventListener('click', dealButton());
 
-let deck = [];
-playerCards = [];
-dealerCards = [];
 
 dealButton.addEventListener('click', function() {
-  //create a deck
-  deck = createDeck();
-  //shuffle the deck
-  shuffleDeck(deck);
-  //dealer gets cards
-  dealerCards = [nextCard(), nextCard()];
-  //player gets cards
-  playerCards = [nextCard(), nextCard()];
+  
 
 })
 
 hitButton.addEventListener('click', function() {
-  playerCards.push(nextCard());
+
 
 })
-
-function createDeck() {
-  let deck = []
-    for (let j = 0; j < values.length; j++) {
-      let card = {
-        value: values[j]
-      }
-      deck.push(card);
-    }
-  }
-  return deck;
-}
 
 function shuffleDeck(deck) {
   for(let i = 0; i < deck.length; i++) {
@@ -55,12 +31,6 @@ function shuffleDeck(deck) {
     deck[i] = tmp;
   }
 }
-
-/*
-function nextCard() {
-  return deck.shift();
-}
-*/
 
 //Define varaiables 
 let mainGame = document.getElementById("game-container");
