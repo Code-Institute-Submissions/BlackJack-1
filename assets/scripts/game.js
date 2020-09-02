@@ -9,9 +9,10 @@ let values = ['Ace', 'King', 'Queen', 'Jack',
 
 
 
-let dealButton = document.getElementById("btnDeal");
-let hitButton = document.getElementById("btnHit");
-let stayButton = document.getElementById("btnStay");
+
+document.querySelector("#btnDeal").addEventListener('click', dealButton());
+document.querySelector('#btnHit').addEventListener('click', hitButton())
+document.querySelector('#btnStay').addEventListener('click', stayButton());
 
 let deck = [];
 playerCards = [];
