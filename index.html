@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,68 +8,36 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
 </head>
-
 <body>
- 
-    <div id="title-container">
-        <h2 id="header-text">Let's Play Blackjack</h2>
-        <div id="title-btns-container">
-            <button type="button" id="btnStart" class="btn btn-info btn-lg">Start Game</button>
-            <button type="button" id="btnInstruct" class="btn btn-info btn-lg">How to Play</button>
-        </div>
-    
-        <!-- The Modal -->
-        <!--- Structure of modal take from https://www.w3schools.com/howto/howto_css_modals.asp -->
-        <div id="myModal" class="modal">
-            <!-- Modal content -->
-            <div class="modal-content">
-                <span class="close">&times;</span>
-                <h2 id="modal-h2">How to Play Blackjack</h2>
-                <p>The goal of blackjack is to beat the dealer's hand without going over 21.</p>
-                <h4>Card Values</h4>
-                <ol>
-                    <li>Face cards are worth 10</li>
-                    <li>Aces are worth 1 or 11, whichever makes a better hand</li>
-                    <li>Numerical value of a card is its value</li>
-                </ol>
-                <h4>How to play</h4>
-                <ol>
-                    <li>Press <strong>Hit</strong> to deal another card</li>
-                    <li>Press <strong>Stay</strong> to hold your current total and end your turn.</li>
-                    <li>If you go over 21 you bust</li>
-                </ol>
+    <!--Container for all of the game section-->
+    <div class="game-container">
+        <!--Show status of who won or lost the round-->
+        <h3><span id="blackjack-result">Let's play</span></h3>
+        
+        <!--Section for the main game area-->
+        <div class="game-section">
+            <div id="players-box">
+                <h2>You:<span id="players-result">0</span></h2>
+            </div>
+            <div id="dealers-box">
+                <h2>Dealer:<span id="dealers-result">0</span></h2>
             </div>
         </div>
-    </div>
 
-    <!-- Container for the main game -->
-    <div id="game-container" class="container">
-        <!-- Counter for the player and dealers hand -->
-        <!--- Responsive Grid system used with Bootstrap -->
-        <div class="row counter-row">
-            <div id="card-counter" class="col-sm-6">
-                <div id="dealers-hand" class="counter">Dealer: <span>0</span></div>
-                <div class="deck"></div>
-            </div>
-            <div id="card-counter" class="col-sm-6">
-                <div id="players-hand" class="counter">Player: <span>0</span></div>
-                <div class="deck"></div>
+        <!--Section for the main game controls-->
+        <div class="controls-section">
+            <div>
+                <!--Boostrap styled buttons-->
+                <button type="button" id="btnHit" class="btn btn-success btn-lg">Hit</button>
+                <button type="button" id="btnStay" class="btn btn-warning btn-lg">Stay</button>
+                <button type="button" id="btnDeal" class="btn btn-primary btn-lg">Deal</button>
             </div>
         </div>
-    </div>
-
-  <!--- Fixed Footer Section -->
-    <div id="footer">
-        <!-- Players control panel -->
-        <div id="controls">
-            <div id="next-steps">Press Deal to Start Game</div>
-            <!--- Bootstrap buttons -->
-            <button type="button" id="btnDeal" class="btn btn-primary btn-lg">Deal</button>
-            <button type="button" id="btnHit" class="btn btn-success btn-lg" disabled>Hit</button>
-            <button type="button" id="btnStay" class="btn btn-warning btn-lg" disabled>Stay</button>
-        </div>
-
+        
+        <!--Table for user scores tallied-->
+        <div class="table-sections">
         <!-- Keep track of users wins and losses -->
         <!-- Bootstrap created table -->
         <table id="score-table" class="table table-striped">
@@ -84,14 +51,13 @@
             <tbody>
                 <tr>
                     <td><span id="wins">0</span></td>
-                    <td><span id="los">0</span></td>
-                    <td><span id="wins">0</span></td>
+                    <td><span id="losses">0</span></td>
+                    <td><span id="draw">0</span></td>
                 </tr>
             </tbody>
         </table>
+        </div>
     </div>
 
-    <!-- Main script for game-->
-    <script type="text/javascript" src="assets/scripts/game.js"></script>
 </body>
 </html>
