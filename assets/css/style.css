@@ -1,105 +1,55 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
-
-html, 
+html,
 body {
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
 }
 
-/* ------ title container ----- */
-
-#title-container {
-    padding: 10%;
-}
-
-#header-text {
-    text-align: center;
-    padding: 3% 0;
-    font-family: "Oswald", sans-serif;
-    font-size: 50px;
-}
-
-#title-btns-container {
-    text-align: center;
-}
-
-#btnStart,
-#btnInstruct {
-    padding: 3% 4%;
-}
-
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-
-}
-
-/* Modal Content/Box */
-.modal-content {
-  margin: 10% auto; /* 15% from the top and centered */
-  padding: 2% 32%; 
-
-}
-
-/* The Close Button */
-.close {
-  color: #aaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: black;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-/* ----- counter for the users hand ---- */ 
-
-#game-container {
+.game-container {
+    width: 95%;
     margin: 2% auto;
-    width: 100%;
-}
-
-.counter-row {
-    height: 100%;
-}
-
-#card-counter { 
     text-align: center;
-    font-family: "Owswald", sans-serif;
-    text-transform: uppercase; 
+    border: 1px solid black;
 }
 
-.deck {
-    margin: 50%;
-}
-
-/* --- Footer --- */ 
-
-#footer {
-    text-align: center;
-    width: 100%;
+.game-section,
+.controls-section,
+.table-section {
     display: flex;
+    padding: 10px;
     flex-wrap: wrap;
-    justify-content: center;
-    align-items: flex-end;
-    position: absolute;
-    bottom: 0px;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-#score-table {
-    margin: 0;
+#blackjack-result {
+    padding: 5%;
 }
 
-#controls {
-    margin: 2% 0;
+.game-section div {
+    border: 1px solid black;
+    padding: 10px;
+    flex: 1;
+    height: 350px;
+    text-align: center;
+}
+
+.game-section img {
+    width: 25%;
+    padding: 10px;
+}
+
+.controls-section button {
+    padding: 10px;
+}
+
+.controls-section div {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+.table-section {
+    padding: 0;
+    margin: 0 auto;
 }
