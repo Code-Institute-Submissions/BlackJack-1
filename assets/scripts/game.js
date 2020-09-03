@@ -1,6 +1,42 @@
+let titleContainer = document.getElementById("title-container");
+let btnStartGame = document.getElementById("btnStart");
+let btnGameInstruct = document.getElementById("btnInstruct");
+let modal = document.getElementById("myModal");
+let span = document.getElementsByClassName("close")[0];
+let mainGame = document.getElementById("game-container");
+
+//mainGame.style.display = 'none';
+
+titleContainer.style.display = 'none';
+
+// When the user clicks on the button, open the modal
+btnGameInstruct.onclick = function() {
+  modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+  modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+//When the Start Game button is clicked this will take user to main game page
+btnStartGame.addEventListener('click', function() {
+    titleContainer.style.display = 'none';
+    mainGame.style.display = 'block';
+});
+
+
+//////////////////
 
 //define the cardValues in an array
-const cardValues = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two']
+let cardValues = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two']
 
 let playerWins = [];
 let playerLosses = [];
@@ -23,7 +59,7 @@ function hitButton() {
   gameCardImage(gameCard);
   //update the total score 
 
-
+  playersScore.push(gameCard);
 };
 
 //Function to randomise the values
@@ -70,6 +106,38 @@ function dealButton() {
 
 }
 
+function getScore(playersScore) {
+  let score = 0;
+
+}
+
+
+
+
+
+
+
+
+//function for if the player wins
+function wins() {
+  playerWins ++;
+  //change the HTML for wins in score table
+  document.querySelector("#wins").innerHTML = playerWins;
+}
+
+function losses() {
+  playerLosses++;
+  //change the HTML for losses in score table
+  document.querySelector("#losses").innerHTML = playerLosses;
+}
+
+function draws() {
+  playerDraws++;
+  //change the HTML for draws in score table
+  document.querySelector("#draw").innerHTML = playerDraws;
+}
+
+
 /*
 function getCardNumericValue(gameCard){
   switch(gameCard){
@@ -88,29 +156,3 @@ function getCardNumericValue(gameCard){
 }
 
 */
-/*
-// When the user clicks on the button, open the modal
-btnGameInstruct.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-
-//When the Start Game button is clicked this will take user to main game page
-btnStartGame.addEventListener('click', function() {
-    titleContainer.style.display = 'none';
-    mainGame.style.display = 'block';
-    footer.style.display = 'block';
-});
-*/
-
