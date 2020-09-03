@@ -38,7 +38,6 @@ btnStartGame.addEventListener('click', function() {
 //define the cardValues in an array
 let cardValues = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two']
 
-
 let playerWins = [];
 let playerLosses = [];
 let playerDraws = [];
@@ -46,13 +45,12 @@ let playerDraws = [];
 let playersCards = [];
 let dealersCards = [];
 
-let playersScore = [];
-let dealersScore = [];
+var playersScore = [];
 
 //query select the control buttons
 document.querySelector('#btnHit').addEventListener('click', hitButton);
 //document.querySelector('#btnStay').addEventListener('click', stayButton);
-document.querySelector("#btnDeal").addEventListener('click', dealButton);
+//document.querySelector("#btnDeal").addEventListener('click', dealButton);
 
 function hitButton() {
   //a random card is generated
@@ -60,8 +58,9 @@ function hitButton() {
   //gameCardImage will take the random card and it will show the cards image
   gameCardImage(gameCard);
   //update the total score 
-
   playersCards.push(gameCard);
+
+  playersScore = getPlayersScore();
 };
 
 //Function to randomise the values
@@ -79,6 +78,7 @@ function gameCardImage(gameCard) {
   document.querySelector('#players-box').appendChild(cardImage);
 }
 
+/*
 //When player presses the dealButton
 function dealButton() {
   //define variables to select all images within the players and dealers boxes
@@ -105,18 +105,20 @@ function dealButton() {
 
   //the status of the game will revert back to "lets play" after a winner or loser is indicated
   document.querySelector("#blackjack-result").innerHTML = "Test test";
-
 }
+*/
+
 
 //get the players score
-function getPlayerScore() {
-//convert the playersCards array items to numeric values 
+function getPlayersScore() {
+  var convertedArray = [];
+  //convert the playersCards array items to numeric values 
   for (let i = 0; i < playersCards.length; i++) {
     let converted = getCardNumericValue(playersCards[i]);
     //push the new converted numbers to the playersScore array
-    playersScore.push(converted);
+    convertedArray.push(converted);
   }
-return playersScore;
+  return convertedArray;
 };
 
 //function to convert the cardValues to the numerical value
@@ -144,6 +146,7 @@ function getCardNumericValue(toConvertCard) {
   }
 } 
 
+/*
 //function for if the player wins
 function wins() {
   playerWins ++;
@@ -162,3 +165,4 @@ function draws() {
   //change the HTML for draws in score table
   document.querySelector("#draw").innerHTML = playerDraws;
 }
+*/
