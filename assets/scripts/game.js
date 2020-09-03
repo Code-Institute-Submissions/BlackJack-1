@@ -42,7 +42,7 @@ let playerWins = [];
 let playerLosses = [];
 let playerDraws = [];
 
-let playersCards = [];
+var playersCards = [];
 let dealersCards = [];
 
 var playersScore = [];
@@ -50,7 +50,7 @@ var playersScore = [];
 //query select the control buttons
 document.querySelector('#btnHit').addEventListener('click', hitButton);
 //document.querySelector('#btnStay').addEventListener('click', stayButton);
-//document.querySelector("#btnDeal").addEventListener('click', dealButton);
+document.querySelector("#btnDeal").addEventListener('click', dealButton);
 
 function hitButton() {
   //a random card is generated
@@ -59,8 +59,9 @@ function hitButton() {
   gameCardImage(gameCard);
   //update the total score 
   playersCards.push(gameCard);
-
+  //push the convertedplayers score array into the playersScore array
   playersScore = getPlayersScore();
+  //show the players score when the hitButton is clicked
   showPlayersScore();
 };
 
@@ -79,7 +80,7 @@ function gameCardImage(gameCard) {
   document.querySelector('#players-box').appendChild(cardImage);
 }
 
-/*
+
 //When player presses the dealButton
 function dealButton() {
   //define variables to select all images within the players and dealers boxes
@@ -100,14 +101,17 @@ function dealButton() {
   playersScore = 0;
   dealersScore = 0;
 
+  //players set of cards revert back to 0
+  playersCards = 0;
+
   //players and dealers score spans will be set back to 0
   document.querySelector("#players-result").innerHTML = 0;
   document.querySelector("#dealers-result").innerHTML = 0;
 
   //the status of the game will revert back to "lets play" after a winner or loser is indicated
-  document.querySelector("#blackjack-result").innerHTML = "Test test";
+  document.querySelector("#blackjack-result").innerHTML = "Let's play again";
 }
-*/
+
 
 
 //get the players score
@@ -147,10 +151,12 @@ function getCardNumericValue(toConvertCard) {
   }
 } 
 
+//simple function to get the sum of values
 function getSum(total, num) {
   return total + num;
 }
 
+//function to display the playersscore sum to the HTML span tag
 function showPlayersScore() {
   document.getElementById("players-result").innerHTML = playersScore.reduce(getSum, 0);
 }
