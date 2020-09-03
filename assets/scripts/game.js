@@ -33,19 +33,21 @@ btnStartGame.addEventListener('click', function() {
 });
 
 
-//////////////////
+////////////////// Main Game Logic
 
 //define the cardValues in an array
 let cardValues = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two']
+
 
 let playerWins = [];
 let playerLosses = [];
 let playerDraws = [];
 
+let playersCards = [];
+let dealersCards = [];
+
 let playersScore = [];
 let dealersScore = [];
-
-
 
 //query select the control buttons
 document.querySelector('#btnHit').addEventListener('click', hitButton);
@@ -59,7 +61,7 @@ function hitButton() {
   gameCardImage(gameCard);
   //update the total score 
 
-  playersScore.push(gameCard);
+  playersCards.push(gameCard);
 };
 
 //Function to randomise the values
@@ -106,17 +108,41 @@ function dealButton() {
 
 }
 
-function getScore(playersScore) {
-  let score = 0;
+//get the players score
+function getPlayerScore() {
+//convert the playersCards array items to numeric values 
+  for (let i = 0; i < playersCards.length; i++) {
+    let converted = getCardNumericValue(playersCards[i]);
+    //push the new converted numbers to the playersScore array
+    playersScore.push(converted);
+  }
+return playersScore;
+};
 
-}
-
-
-
-
-
-
-
+//function to convert the cardValues to the numerical value
+function getCardNumericValue(toConvertCard) {
+  if(toConvertCard === 'Ace') {
+    return 1;
+  } else if (toConvertCard === 'Two') {
+    return 2;
+  } else if (toConvertCard === 'Three') {
+    return 3;
+  } else if (toConvertCard === 'Four') {
+    return 4;
+  } else if (toConvertCard === 'Five') {
+    return 5;
+  } else if (toConvertCard === 'Six') {
+    return 6;
+  } else if (toConvertCard === 'Seven') {
+    return 7;
+  } else if (toConvertCard === 'Eight') {
+    return 8;
+  } else if (toConvertCard === 'Nine') {
+    return 9;
+  } else {
+    return 10;
+  }
+} 
 
 //function for if the player wins
 function wins() {
@@ -136,23 +162,3 @@ function draws() {
   //change the HTML for draws in score table
   document.querySelector("#draw").innerHTML = playerDraws;
 }
-
-
-/*
-function getCardNumericValue(gameCard){
-  switch(gameCard){
-    case 'Ace': return 1;
-    case 'Two': return 2;
-    case 'Three': return 3;
-    case 'Four': return 4;
-    case 'Five': return 5;
-    case 'Six': return 6;
-    case 'Seven': return 7;
-    case 'Eight': return 8;
-    case 'Nine': return 9;
-    default:
-      return 10; 
-  }
-}
-
-*/
