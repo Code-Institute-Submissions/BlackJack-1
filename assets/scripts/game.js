@@ -61,6 +61,7 @@ function hitButton() {
   playersCards.push(gameCard);
 
   playersScore = getPlayersScore();
+  showPlayersScore();
 };
 
 //Function to randomise the values
@@ -145,6 +146,14 @@ function getCardNumericValue(toConvertCard) {
     return 10;
   }
 } 
+
+function getSum(total, num) {
+  return total + num;
+}
+
+function showPlayersScore() {
+  document.getElementById("players-result").innerHTML = playersScore.reduce(getSum, 0);
+}
 
 /*
 //function for if the player wins
