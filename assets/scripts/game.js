@@ -46,17 +46,20 @@ var playersCards = [];
 let dealersCards = [];
 
 var playersScore = [];
+var dealersScore = [];
+
+gameReset = false;
 
 //query select the control buttons
 document.querySelector('#btnHit').addEventListener('click', hitButton);
-//document.querySelector('#btnStay').addEventListener('click', stayButton);
+document.querySelector('#btnStay').addEventListener('click', stayButton);
 document.querySelector("#btnDeal").addEventListener('click', dealButton);
 
 function hitButton() {
   //a random card is generated
   let gameCard = randomCard();
   //gameCardImage will take the random card and it will show the cards image
-  gameCardImage(gameCard);
+  gameCardImagePlayer(gameCard);
   //update the total score 
   playersCards.push(gameCard);
   //push the convertedplayers score array into the playersScore array
@@ -65,6 +68,17 @@ function hitButton() {
   showPlayersScore();
 };
 
+//When players hits stay - this will deal out the dealers cards adn score
+function stayButton() {
+  let gameCard = randomCard();
+  gameCardImageDealer(gameCard);
+  dealersCards.push(gameCard);
+  dealersScore = getDealersScore();
+  showDealersScore()
+}
+
+
+
 //Function to randomise the values
 function randomCard() {
   const randomIndex = Math.floor(Math.random() * 13);
@@ -72,7 +86,7 @@ function randomCard() {
 };
 
 //Whenever the HIT button is clicked a card will be shown
-function gameCardImage(gameCard) {
+function gameCardImagePlayer(gameCard) {
   //create a section within the player's box so the image can be shown within the box
   let cardImage = document.createElement('img');
   //the gameCard will match the name of the png and that card will show on the board
@@ -80,6 +94,14 @@ function gameCardImage(gameCard) {
   document.querySelector('#players-box').appendChild(cardImage);
 }
 
+//Whenever the HIT button is clicked a card will be shown
+function gameCardImageDealer(gameCard) {
+  //create a section within the player's box so the image can be shown within the box
+  let cardImage = document.createElement('img');
+  //the gameCard will match the name of the png and that card will show on the board
+  cardImage.src = `assets/images/PNG/${gameCard}.png`;
+  document.querySelector('#dealers-box').appendChild(cardImage);
+}
 
 //When player presses the dealButton
 function dealButton() {
@@ -110,6 +132,8 @@ function dealButton() {
 
   //the status of the game will revert back to "lets play" after a winner or loser is indicated
   document.querySelector("#blackjack-result").innerHTML = "Let's play again";
+
+  gameReset = true;
 }
 
 
@@ -125,6 +149,17 @@ function getPlayersScore() {
   }
   return convertedArray;
 };
+
+function getDealersScore() {
+  var convertedArray = [];
+  //convert the playersCards array items to numeric values 
+  for (let i = 0; i < dealersCards.length; i++) {
+    let converted = getCardNumericValue(dealersCards[i]);
+    //push the new converted numbers to the playersScore array
+    convertedArray.push(converted);
+  }
+  return convertedArray;
+}
 
 //function to convert the cardValues to the numerical value
 function getCardNumericValue(toConvertCard) {
@@ -159,6 +194,10 @@ function getSum(total, num) {
 //function to display the playersscore sum to the HTML span tag
 function showPlayersScore() {
   document.getElementById("players-result").innerHTML = playersScore.reduce(getSum, 0);
+}
+
+function showDealersScore() {
+  document.getElementById("dealers-result").innerHTML = dealersScore.reduce(getSum, 0);
 }
 
 /*
