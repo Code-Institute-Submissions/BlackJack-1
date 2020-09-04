@@ -38,20 +38,17 @@ btnStartGame.addEventListener('click', function() {
 //define the cardValues in an array
 let cardValues = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two']
 
-let playerWins = [];
-let playerLosses = [];
-let playerDraws = [];
-
+//array for the the set of cards
 var playersCards = [];
 let dealersCards = [];
 
+//array for the scores from the cards values to numerical values
 var playersScore = [];
 var dealersScore = [];
 
+//gets total score/sum of the score values
 var playersScoreTotal = 0;
 var dealersScoreTotal = 0;
-
-gameReset = false;
 
 //query select the control buttons
 document.querySelector('#btnHit').addEventListener('click', hitButton);
@@ -59,29 +56,33 @@ document.querySelector('#btnStay').addEventListener('click', stayButton);
 document.querySelector("#btnDeal").addEventListener('click', dealButton);
 
 function hitButton() {
-  //a random card is generated
-  let gameCard = randomCard();
-  //gameCardImage will take the random card and it will show the cards image
-  gameCardImagePlayer(gameCard);
-  //update the total score 
-  playersCards.push(gameCard);
-  //push the convertedplayers score array into the playersScore array
+  //button will operate only when playersscore is less than 16
+  if(playersScoreTotal < 16) {
+    //a random card is generated
+    let gameCard = randomCard();
+    //gameCardImage will take the random card and it will show the cards image
+    gameCardImagePlayer(gameCard);
+    //update the total score 
+    playersCards.push(gameCard);
+     //push the convertedplayers score array into the playersScore array
   playersScore = getPlayersScore();
   //show the players score when the hitButton is clicked
   playersScoreTotal = showPlayersScore();
+}
+ 
 };
 
 //When players hits stay - this will deal out the dealers cards adn score
 function stayButton() {
-  let gameCard = randomCard();
-  gameCardImageDealer(gameCard);
-  dealersCards.push(gameCard);
-  dealersScore = getDealersScore();
-  showDealersScore()
+  //button will operate only when dealersscore is less than 16
+  if(dealersScoreTotal < 16) {
+    let gameCard = randomCard();
+    gameCardImageDealer(gameCard);
+    dealersCards.push(gameCard);
+    dealersScore = getDealersScore();
+    dealersScoreTotal = showDealersScore();
+  }
 }
-
-
-
 //Function to randomise the values
 function randomCard() {
   const randomIndex = Math.floor(Math.random() * 13);
@@ -108,6 +109,7 @@ function gameCardImageDealer(gameCard) {
 
 //When player presses the dealButton
 function dealButton() {
+
   //define variables to select all images within the players and dealers boxes
   let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
   let dealersCardImages = document.querySelector("#dealers-box").querySelectorAll('img');
@@ -122,13 +124,6 @@ function dealButton() {
     dealersCardImages[j].remove();
   }
 
-  //player and dealers score are set back to be 0
-  playersScore = 0;
-  dealersScore = 0;
-
-  //players set of cards revert back to 0
-  playersCards = 0;
-
   //players and dealers score spans will be set back to 0
   document.querySelector("#players-result").innerHTML = 0;
   document.querySelector("#dealers-result").innerHTML = 0;
@@ -136,10 +131,7 @@ function dealButton() {
   //the status of the game will revert back to "lets play" after a winner or loser is indicated
   document.querySelector("#blackjack-result").innerHTML = "Let's play again";
 
-  gameReset = true;
 }
-
-
 
 //get the players score
 function getPlayersScore() {
@@ -196,13 +188,13 @@ function getSum(total, num) {
 
 //function to display the playersscore sum to the HTML span tag
 function showPlayersScore() {
-  return playersScore.reduce(getSum, 0)
   document.getElementById("players-result").innerHTML = playersScore.reduce(getSum, 0);
+  return playersScore.reduce(getSum, 0);
 }
 
 function showDealersScore() {
-  return dealersScore.reduce(getSum, 0)
   document.getElementById("dealers-result").innerHTML = dealersScore.reduce(getSum, 0);
+  return dealersScore.reduce(getSum, 0);
 }
 
 
