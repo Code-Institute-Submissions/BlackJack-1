@@ -48,6 +48,9 @@ let dealersCards = [];
 var playersScore = [];
 var dealersScore = [];
 
+var playersScoreTotal = 0;
+var dealersScoreTotal = 0;
+
 gameReset = false;
 
 //query select the control buttons
@@ -65,7 +68,7 @@ function hitButton() {
   //push the convertedplayers score array into the playersScore array
   playersScore = getPlayersScore();
   //show the players score when the hitButton is clicked
-  showPlayersScore();
+  playersScoreTotal = showPlayersScore();
 };
 
 //When players hits stay - this will deal out the dealers cards adn score
@@ -193,12 +196,18 @@ function getSum(total, num) {
 
 //function to display the playersscore sum to the HTML span tag
 function showPlayersScore() {
+  return playersScore.reduce(getSum, 0)
   document.getElementById("players-result").innerHTML = playersScore.reduce(getSum, 0);
 }
 
 function showDealersScore() {
+  return dealersScore.reduce(getSum, 0)
   document.getElementById("dealers-result").innerHTML = dealersScore.reduce(getSum, 0);
 }
+
+
+
+
 
 /*
 //function for if the player wins
@@ -220,3 +229,4 @@ function draws() {
   document.querySelector("#draw").innerHTML = playerDraws;
 }
 */
+
