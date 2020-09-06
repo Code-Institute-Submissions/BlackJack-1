@@ -3,13 +3,18 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
+    background: URL("/Users/aprilha/Documents/blackjack/assets/images/casino_table_bg.jpg");
+    background-position: center;
+    background-size: cover;
 }
 
 #game-container {
     width: 95%;
-    margin: 2% auto;
+    margin: 1% auto;
+    padding: 1%;
     text-align: center;
-    border: 1px solid black;
+    border: 2px dashed white;
+    border-radius: 10px;
 }
 
 .game-section,
@@ -20,14 +25,14 @@ body {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    color: white;
 }
 
 #blackjack-result {
-    padding: 5%;
+    color: white;
 }
 
 .game-section div {
-    border: 1px solid black;
     padding: 10px;
     flex: 1;
     height: 300px;
@@ -35,8 +40,8 @@ body {
 }
 
 .game-section img {
-    width: 20%;
-    padding: 10px;
+    width: 18%;
+    padding: 1%;
 }
 
 .controls-section button {
@@ -44,8 +49,9 @@ body {
 }
 
 .controls-section div {
-    border: 1px solid black;
-    padding: 10px;
+    background-color: #2F4F4F;
+    border-radius: 4px;
+    padding: 15px;
 }
 
 
