@@ -32,7 +32,6 @@ btnStartGame.addEventListener('click', function() {
     mainGame.style.display = 'block';
 });
 
-
 ////////////////// Main Game Logic
 
 //define the cardValues in an array
@@ -57,7 +56,7 @@ document.querySelector("#btnDeal").addEventListener('click', dealButton);
 
 function hitButton() {
   //button will operate only when playersscore is less than 16
-  if(playersScoreTotal <= 21) {
+  if(playersScoreTotal < 21) {
     //a random card is generated
     let gameCard = randomCard();
     //gameCardImage will take the random card and it will show the cards image
@@ -65,24 +64,31 @@ function hitButton() {
     //update the total score 
     playersCards.push(gameCard);
      //push the convertedplayers score array into the playersScore array
-  playersScore = getPlayersScore();
-  //show the players score when the hitButton is clicked
-  playersScoreTotal = showPlayersScore();
-}
- 
+    playersScore = getPlayersScore();
+    //show the players score when the hitButton is clicked
+    playersScoreTotal = showPlayersScore();
+    changeStatus();
+  }
 };
 
 //When players hits stay - this will deal out the dealers cards adn score
 function stayButton() {
   //button will operate only when dealersscore is less than 16
   if(dealersScoreTotal < 21) {
+    //get a random card
     let gameCard = randomCard();
+    //assign that new random card to its image
     gameCardImageDealer(gameCard);
+    //push the random game card to the dealersCards array
     dealersCards.push(gameCard);
+    //get dealersScore by converting the dealersCards into numerical values
     dealersScore = getDealersScore();
     dealersScoreTotal = showDealersScore();
-  }
+    changeStatus();
+  };
 }
+
+
 //Function to randomise the values
 function randomCard() {
   const randomIndex = Math.floor(Math.random() * 13);
@@ -154,7 +160,7 @@ function getDealersScore() {
     convertedArray.push(converted);
   }
   return convertedArray;
-}
+};
 
 //function to convert the cardValues to the numerical value
 function getCardNumericValue(toConvertCard) {
@@ -197,6 +203,34 @@ function showDealersScore() {
   return dealersScore.reduce(getSum, 0);
 }
 
+//change the status to indicate if score has hit 21 or went over 21 and busted
+function changeStatus() {
+  //if players score is greater than 21
+ if (playersScoreTotal > 21) {
+   //change color to red
+    document.querySelector("#players-result").style.color = 'Red';
+    //change score text to Bust
+    document.querySelector("#players-result").innerHTML = 'BUST!';
+  
+    //if score is equal to 21 change color to green to indicate 21 has been reached
+  } else if (playersScoreTotal === 21) {
+    document.querySelector("#players-result").style.color = 'Green';
+  }
+
+  //change status of dealers score if hit 21 or over 21 and busted
+  //if dealers score is greater than 21
+  if(dealersScoreTotal > 21) {
+    //change color to red
+    document.querySelector("#dealers-result").style.color = 'Red';
+    //change score text to Bust
+    document.querySelector("#dealers-result").innerHTML = 'BUST!';
+  
+    //if score is equal to 21 change color to green
+  } else if (dealersScoreTotal === 21) {
+    document.querySelector("#dealers-result").style.color = 'Green';
+  }
+}
+
 let playerWins;
 let dealerWins;
 let playerDraws;
@@ -204,6 +238,7 @@ let playerDraws;
 let playerWinsScores = 0;
 let playerLossesScores = 0;
 let playerDrawsScores = 0;
+
 
 function determineWinner() {
   let winner;
@@ -244,28 +279,3 @@ function updateTable(winner) {
   document.querySelector("#blackjack-result").innerHTML = playersStatus;
   document.querySelector("#blackjack-result").style.color = statusColor;
 }
-
-
-
-
-/*
-//function for if the player wins
-function wins() {
-  playerWins ++;
-  //change the HTML for wins in score table
-  document.querySelector("#wins").innerHTML = playerWins;
-}
-
-function losses() {
-  playerLosses++;
-  //change the HTML for losses in score table
-  document.querySelector("#losses").innerHTML = playerLosses;
-}
-
-function draws() {
-  playerDraws++;
-  //change the HTML for draws in score table
-  document.querySelector("#draw").innerHTML = playerDraws;
-}
-*/
-
