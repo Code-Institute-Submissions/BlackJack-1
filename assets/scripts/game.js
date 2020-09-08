@@ -68,6 +68,7 @@ function hitButton() {
     //show the players score when the hitButton is clicked
     playersScoreTotal = showPlayersScore();
     changeStatus();
+    
   }
 };
 
@@ -134,8 +135,6 @@ function dealButton() {
   playersCards = [];
   dealersCards = [];
 
-  
-
   //total score counter to reset
   playersScoreTotal = 0;
   dealersScoreTotal = 0;
@@ -144,9 +143,12 @@ function dealButton() {
   document.querySelector("#players-result").innerHTML = 0;
   document.querySelector("#dealers-result").innerHTML = 0;
 
+    //players and dealers score spans will be set back to the color white
+    document.querySelector("#players-result").style.color = "white";
+    document.querySelector("#dealers-result").style.color = "white";
+
   //the status of the game will revert back to "lets play" after a winner or loser is indicated
   document.querySelector("#blackjack-result").innerHTML = "Let's play again";
-
 }
 
 //get the players score
@@ -241,6 +243,7 @@ function changeStatus() {
   }
 }
 
+/*
 let playerWins;
 let dealerWins;
 let playerDraws;
@@ -252,26 +255,7 @@ let playerDrawsScores = 0;
 
 function determineWinner() {
   let winner;
-  if (playersScoreTotal <= 21) {
-    if (playersScoreTotal > dealersScoreTotal || dealersScoreTotal > 21) {
-      playerWinsScores++
-      winner = playerWins;
 
-    } else if (playersScoreTotal < dealersScoreTotal) {
-      playerLossesScores++
-      winner = dealerWins;
-
-    } else if (playersScoreTotal === dealersScoreTotal) {
-      playerDrawsScores++
-    }
-  } else if (playersScoreTotal > 21 && dealersScoreTotal <= 21) {
-    playerLossesScores++
-    winner = dealerWins;
-
-  } else if (playersScoreTotal > 21 && dealersScoreTotal > 21) {
-    playerDrawsScores++
-  }
-  return winner;
 }
 
 function updateTable(winner) {
@@ -289,3 +273,4 @@ function updateTable(winner) {
   document.querySelector("#blackjack-result").innerHTML = playersStatus;
   document.querySelector("#blackjack-result").style.color = statusColor;
 }
+*/
