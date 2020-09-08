@@ -243,34 +243,5 @@ function changeStatus() {
   }
 }
 
-/*
-let playerWins;
-let dealerWins;
-let playerDraws;
-
-let playerWinsScores = 0;
-let playerLossesScores = 0;
-let playerDrawsScores = 0;
 
 
-function determineWinner() {
-  let winner;
-
-}
-
-function updateTable(winner) {
-  let playersStatus;
-  let statusColor;
-
-  if (winner === playerWins) {
-    document.querySelector("#wins").innerHTML = playerWinsScores;
-  } else if (winner === dealerWins) {
-    document.querySelector("#losses").innerHTML = playerLossesScores;
-  } else {
-    document.querySelector("#draws").innerHTML = playerDrawsScores;
-  }
-
-  document.querySelector("#blackjack-result").innerHTML = playersStatus;
-  document.querySelector("#blackjack-result").style.color = statusColor;
-}
-*/
