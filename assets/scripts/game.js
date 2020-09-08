@@ -130,6 +130,16 @@ function dealButton() {
     dealersCardImages[j].remove();
   }
 
+  //players and dealers cards to reset 
+  playersCards = [];
+  dealersCards = [];
+
+  
+
+  //total score counter to reset
+  playersScoreTotal = 0;
+  dealersScoreTotal = 0;
+
   //players and dealers score spans will be set back to 0
   document.querySelector("#players-result").innerHTML = 0;
   document.querySelector("#dealers-result").innerHTML = 0;
