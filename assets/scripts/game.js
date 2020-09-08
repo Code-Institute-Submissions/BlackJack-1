@@ -68,9 +68,12 @@ function hitButton() {
     //show the players score when the hitButton is clicked
     playersScoreTotal = showPlayersScore();
     changeStatus();
-    
   }
+
 };
+
+
+
 
 //When players hits stay - this will deal out the dealers cards adn score
 function stayButton() {
@@ -87,6 +90,7 @@ function stayButton() {
     dealersScoreTotal = showDealersScore();
     changeStatus();
   };
+
 }
 
 
@@ -114,8 +118,13 @@ function gameCardImageDealer(gameCard) {
   document.querySelector('#dealers-box').appendChild(cardImage);
 }
 
+
+
 //When player presses the dealButton
 function dealButton() {
+
+  let winner = determineWinner();
+  //showWinner(winner);
 
   //define variables to select all images within the players and dealers boxes
   let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
@@ -147,8 +156,8 @@ function dealButton() {
     document.querySelector("#players-result").style.color = "white";
     document.querySelector("#dealers-result").style.color = "white";
 
-  //the status of the game will revert back to "lets play" after a winner or loser is indicated
-  document.querySelector("#blackjack-result").innerHTML = "Let's play again";
+  
+  
 }
 
 //get the players score
@@ -243,5 +252,32 @@ function changeStatus() {
   }
 }
 
+function determineWinner() {
+//let winner;
+  if (playersScoreTotal > dealersScoreTotal && playersScoreTotal <= 21) {
+    console.log("player");
+  } else if (playersScoreTotal < dealersScoreTotal && dealersScoreTotal <= 21) {
+    console.log("dealer")
+  } else if (playersScoreTotal === dealersScoreTotal && playersScoreTotal <= 21) {
+    console.log("draw")
+  } else if (playersScoreTotal > 21) {
+    console.log("dealer")
+  }
+//return winner;
+}
 
+/*
+function showWinner(winner){
+  if(winner === player){
+    document.querySelector("#blackjack-result").style.color = 'pink';
+    document.querySelector("#blackjack-result").innerHTML = 'Winner is Player';
+  } else if (winner === dealer) {
+    document.querySelector("#blackjack-result").style.color = 'red';
+    document.querySelector("#blackjack-result").innerHTML = 'Winner is Dealer';
+  } else if (winner === draw) {
+    document.querySelector("#blackjack-result").style.color = 'red';
+    document.querySelector("#blackjack-result").innerHTML = 'No winner, its a draw';
+  }
+} 
 
+*/
