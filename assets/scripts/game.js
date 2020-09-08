@@ -83,10 +83,14 @@ function hitButtonFunc() {
   dealButton.disabled = true;
 };
 
+//Code for async function to slow down the dealers hand reveals - idea from Clever Programmer - JavaScript Tutorial for Beginners[2020]
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
 
 //When players hits stay - this will deal out the dealers cards adn score
-function stayButtonFunc() {
-//it is not the players turn
+async function stayButtonFunc() {
+  //it is not the players turn
   playerHold = true;
 
   //while it is not the players turn - dealer will reveal all cards at once
@@ -104,7 +108,11 @@ function stayButtonFunc() {
     changeStatus();
     hitButton.disabled = true;
     dealButton.disabled = false;
+    await sleep(700);
   }
+  var winner = determineWinner();
+  showWinner(winner);
+  addToTable(winner);
 
 }
 
@@ -139,9 +147,7 @@ function gameCardImageDealer(gameCard) {
 function dealButtonFunc() {
   //it is not the players turn
     playerHold = false;
-    var winner = determineWinner();
-    showWinner(winner);
-    addToTable(winner);
+
     //define variables to select all images within the players and dealers boxes
     let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
     let dealersCardImages = document.querySelector("#dealers-box").querySelectorAll('img');
