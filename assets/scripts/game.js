@@ -53,11 +53,15 @@ var dealersScoreTotal = 0;
 var playerHold = false;
 
 //query select the control buttons
-document.querySelector('#btnHit').addEventListener('click', hitButton);
-document.querySelector('#btnStay').addEventListener('click', stayButton);
-document.querySelector("#btnDeal").addEventListener('click', dealButton);
+document.querySelector('#btnHit').addEventListener('click', hitButtonFunc);
+document.querySelector('#btnStay').addEventListener('click', stayButtonFunc);
+document.querySelector("#btnDeal").addEventListener('click', dealButtonFunc);
 
-function hitButton() {
+let hitButton = document.getElementById("btnHit");
+let stayButton = document.getElementById("btnStay");
+let dealButton = document.getElementById("btnDeal");
+
+function hitButtonFunc() {
   //it is players turn
   playerHold = false;
   //button will operate only when playersscore is less than 16
@@ -75,12 +79,13 @@ function hitButton() {
       changeStatus();
       document.querySelector("#blackjack-result").innerHTML = "Let's play";
       document.querySelector("#blackjack-result").style.color = "white";
-  }
+    }
+  dealButton.disabled = true;
 };
 
 
 //When players hits stay - this will deal out the dealers cards adn score
-function stayButton() {
+function stayButtonFunc() {
 //it is not the players turn
   playerHold = true;
 
@@ -97,6 +102,8 @@ function stayButton() {
     dealersScore = getDealersScore();
     dealersScoreTotal = showDealersScore();
     changeStatus();
+    hitButton.disabled = true;
+    dealButton.disabled = false;
   }
 
 }
@@ -129,7 +136,7 @@ function gameCardImageDealer(gameCard) {
 
 
 //When player presses the dealButton 
-function dealButton() {
+function dealButtonFunc() {
   //it is not the players turn
     playerHold = false;
     var winner = determineWinner();
@@ -164,7 +171,7 @@ function dealButton() {
       //players and dealers score spans will be set back to the color white
       document.querySelector("#players-result").style.color = "white";
       document.querySelector("#dealers-result").style.color = "white";
-    
+    hitButton.disabled = false;
 }
 
 //get the players score
