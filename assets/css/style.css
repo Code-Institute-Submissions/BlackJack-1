@@ -3,9 +3,16 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    background: URL("/Users/aprilha/Documents/blackjack/assets/images/casino_table_bg.jpg");
-    background-position: center;
-    background-size: cover;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    height: 100%;
+    /* -- Set to important to overwrite bootstrap default white background -- */
+    background-color: #006802 !important;
 }
 
 #game-container {
@@ -13,7 +20,7 @@ body {
     margin: 1% auto;
     padding: 1%;
     text-align: center;
-    border: 2px dashed white;
+    border: 2px dashed black;
     border-radius: 10px;
 }
 
