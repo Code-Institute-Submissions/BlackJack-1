@@ -5,9 +5,9 @@ let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 let mainGame = document.getElementById("game-container");
 
-//mainGame.style.display = 'none';
+mainGame.style.display = 'none';
 
-titleContainer.style.display = 'none';
+//titleContainer.style.display = 'none';
 
 // When the user clicks on the button, open the modal
 btnGameInstruct.onclick = function() {
@@ -128,7 +128,7 @@ function dealButton() {
 
   var winner = determineWinner();
   showWinner(winner);
- 
+  addToTable(winner);
 
   //define variables to select all images within the players and dealers boxes
   let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
@@ -287,3 +287,12 @@ function showWinner(winner){
 
 
 
+function addToTable(winner) {
+ if(winner === "playerWins"){
+   document.querySelector("#wins").innerHTML ++;
+ } else if (winner === "dealerWins") {
+  document.querySelector("#losses").innerHTML ++;
+ } else if (winner === "wasDraw") {
+  document.querySelector("#draw").innerHTML ++;
+ }
+}
