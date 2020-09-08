@@ -69,6 +69,8 @@ function hitButton() {
     //show the players score when the hitButton is clicked
     playersScoreTotal = showPlayersScore();
     changeStatus();
+    document.querySelector("#blackjack-result").innerHTML = "Let's play";
+    document.querySelector("#blackjack-result").style.color = "white";
   }
 
 };
@@ -235,7 +237,7 @@ function changeStatus() {
   
     //if score is equal to 21 change color to green to indicate 21 has been reached
   } else if (playersScoreTotal === 21) {
-    document.querySelector("#players-result").style.color = 'Green';
+    document.querySelector("#players-result").style.color = '#45fc03';
   }
 
   //change status of dealers score if hit 21 or over 21 and busted
@@ -248,7 +250,7 @@ function changeStatus() {
   
     //if score is equal to 21 change color to green
   } else if (dealersScoreTotal === 21) {
-    document.querySelector("#dealers-result").style.color = 'Green';
+    document.querySelector("#dealers-result").style.color = '#45fc03';
   }
 }
 
@@ -262,24 +264,24 @@ var winner;
     winner = "wasDraw";
   } else if (playersScoreTotal > 21) {
     winner = "dealerWins";
+  } else if (dealersScoreTotal > 21 && playersScoreTotal <= 21) {
+    winner = "playerWins";
   }
 
 return winner;
 }
 
-
-
 function showWinner(winner){
 
   if(winner === "playerWins"){
-    document.querySelector("#blackjack-result").style.color = 'pink';
-    document.querySelector("#blackjack-result").innerHTML = 'Winner is Player';
+    document.querySelector("#blackjack-result").style.color = '#45fc03';
+    document.querySelector("#blackjack-result").innerHTML = 'WINNER IS PLAYER';
   } else if (winner === "dealerWins") {
-    document.querySelector("#blackjack-result").style.color = 'red';
-    document.querySelector("#blackjack-result").innerHTML = 'Winner is Dealer';
+    document.querySelector("#blackjack-result").style.color = 'Red';
+    document.querySelector("#blackjack-result").innerHTML = 'WINNER IS DEALER';
   } else if (winner === "wasDraw") {
-    document.querySelector("#blackjack-result").style.color = 'red';
-    document.querySelector("#blackjack-result").innerHTML = 'No winner, its a draw';
+    document.querySelector("#blackjack-result").style.color = 'Blue';
+    document.querySelector("#blackjack-result").innerHTML = "NO WINNER, WAS A DRAW";
   }
 } 
 
