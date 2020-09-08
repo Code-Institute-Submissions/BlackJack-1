@@ -5,9 +5,9 @@ let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 let mainGame = document.getElementById("game-container");
 
-mainGame.style.display = 'none';
+//mainGame.style.display = 'none';
 
-//titleContainer.style.display = 'none';
+titleContainer.style.display = 'none';
 
 // When the user clicks on the button, open the modal
 btnGameInstruct.onclick = function() {
@@ -49,6 +49,8 @@ var dealersScore = [];
 var playersScoreTotal = 0;
 var dealersScoreTotal = 0;
 
+//it is the players turn
+var playerHold = false;
 
 //query select the control buttons
 document.querySelector('#btnHit').addEventListener('click', hitButton);
@@ -56,32 +58,35 @@ document.querySelector('#btnStay').addEventListener('click', stayButton);
 document.querySelector("#btnDeal").addEventListener('click', dealButton);
 
 function hitButton() {
+  //it is players turn
+  playerHold = false;
   //button will operate only when playersscore is less than 16
-  if(playersScoreTotal < 21) {
-    //a random card is generated
-    let gameCard = randomCard();
-    //gameCardImage will take the random card and it will show the cards image
-    gameCardImagePlayer(gameCard);
-    //update the total score 
-    playersCards.push(gameCard);
-     //push the convertedplayers score array into the playersScore array
-    playersScore = getPlayersScore();
-    //show the players score when the hitButton is clicked
-    playersScoreTotal = showPlayersScore();
-    changeStatus();
-    document.querySelector("#blackjack-result").innerHTML = "Let's play";
-    document.querySelector("#blackjack-result").style.color = "white";
+    if(playersScoreTotal < 21) {
+      //a random card is generated
+      let gameCard = randomCard();
+      //gameCardImage will take the random card and it will show the cards image
+      gameCardImagePlayer(gameCard);
+      //update the total score 
+      playersCards.push(gameCard);
+      //push the convertedplayers score array into the playersScore array
+      playersScore = getPlayersScore();
+      //show the players score when the hitButton is clicked
+      playersScoreTotal = showPlayersScore();
+      changeStatus();
+      document.querySelector("#blackjack-result").innerHTML = "Let's play";
+      document.querySelector("#blackjack-result").style.color = "white";
   }
-
 };
-
-
 
 
 //When players hits stay - this will deal out the dealers cards adn score
 function stayButton() {
+//it is not the players turn
+  playerHold = true;
+
+  //while it is not the players turn - dealer will reveal all cards at once
+  while(dealersScoreTotal < 16 && playerHold === true) {
   //button will operate only when dealersscore is less than 16
-  if(dealersScoreTotal < 21) {
     //get a random card
     let gameCard = randomCard();
     //assign that new random card to its image
@@ -92,7 +97,7 @@ function stayButton() {
     dealersScore = getDealersScore();
     dealersScoreTotal = showDealersScore();
     changeStatus();
-  };
+  }
 
 }
 
@@ -123,43 +128,43 @@ function gameCardImageDealer(gameCard) {
 
 
 
-//When player presses the dealButton
+//When player presses the dealButton 
 function dealButton() {
+  //it is not the players turn
+    playerHold = false;
+    var winner = determineWinner();
+    showWinner(winner);
+    addToTable(winner);
+    //define variables to select all images within the players and dealers boxes
+    let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
+    let dealersCardImages = document.querySelector("#dealers-box").querySelectorAll('img');
 
-  var winner = determineWinner();
-  showWinner(winner);
-  addToTable(winner);
+    //for loop to remove all of the images within the boxes
+    //remove the images within the players box
+    for(i = 0; i < playersCardImages.length; i++){
+      playersCardImages[i].remove();
+    }
+    //remove the images within the dealers box
+    for(j = 0; j < dealersCardImages.length; j++){
+      dealersCardImages[j].remove();
+    }
 
-  //define variables to select all images within the players and dealers boxes
-  let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
-  let dealersCardImages = document.querySelector("#dealers-box").querySelectorAll('img');
+    //players and dealers cards to reset 
+    playersCards = [];
+    dealersCards = [];
 
-  //for loop to remove all of the images within the boxes
-  //remove the images within the players box
-  for(i = 0; i < playersCardImages.length; i++){
-    playersCardImages[i].remove();
-  }
-  //remove the images within the dealers box
-  for(j = 0; j < dealersCardImages.length; j++){
-    dealersCardImages[j].remove();
-  }
+    //total score counter to reset
+    playersScoreTotal = 0;
+    dealersScoreTotal = 0;
 
-  //players and dealers cards to reset 
-  playersCards = [];
-  dealersCards = [];
+    //players and dealers score spans will be set back to 0
+    document.querySelector("#players-result").innerHTML = 0;
+    document.querySelector("#dealers-result").innerHTML = 0;
 
-  //total score counter to reset
-  playersScoreTotal = 0;
-  dealersScoreTotal = 0;
-
-  //players and dealers score spans will be set back to 0
-  document.querySelector("#players-result").innerHTML = 0;
-  document.querySelector("#dealers-result").innerHTML = 0;
-
-    //players and dealers score spans will be set back to the color white
-    document.querySelector("#players-result").style.color = "white";
-    document.querySelector("#dealers-result").style.color = "white";
-  
+      //players and dealers score spans will be set back to the color white
+      document.querySelector("#players-result").style.color = "white";
+      document.querySelector("#dealers-result").style.color = "white";
+    
 }
 
 //get the players score
@@ -254,6 +259,7 @@ function changeStatus() {
   }
 }
 
+//logic to determine who has won each of the rounds
 function determineWinner() {
 var winner;
   if (playersScoreTotal > dealersScoreTotal && playersScoreTotal <= 21) {
@@ -271,6 +277,7 @@ var winner;
 return winner;
 }
 
+//display the winner in the blackjack-result span
 function showWinner(winner){
 
   if(winner === "playerWins"){
@@ -286,7 +293,7 @@ function showWinner(winner){
 } 
 
 
-
+//incremeant the table by 1 by who the winner of the round was
 function addToTable(winner) {
  if(winner === "playerWins"){
    document.querySelector("#wins").innerHTML ++;
