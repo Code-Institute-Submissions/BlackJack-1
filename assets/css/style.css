@@ -20,7 +20,7 @@ body {
     margin: 1% auto;
     padding: 1%;
     text-align: center;
-    border: 2px dashed black;
+    border: 4px dashed white;
     border-radius: 10px;
 }
 
@@ -67,10 +67,16 @@ body {
     margin: 0 auto;
 }
 
+table, th, td{
+    padding: 10px;
+    border: 1px solid white;
+}
+
 /* ------ title container ----- */
 
 #title-container {
     padding: 8% 0;
+    color: white;
 }
 
 #header-text {
