@@ -49,6 +49,7 @@ var dealersScore = [];
 var playersScoreTotal = 0;
 var dealersScoreTotal = 0;
 
+
 //query select the control buttons
 document.querySelector('#btnHit').addEventListener('click', hitButton);
 document.querySelector('#btnStay').addEventListener('click', stayButton);
@@ -123,8 +124,9 @@ function gameCardImageDealer(gameCard) {
 //When player presses the dealButton
 function dealButton() {
 
-  let winner = determineWinner();
-  //showWinner(winner);
+  var winner = determineWinner();
+  showWinner(winner);
+ 
 
   //define variables to select all images within the players and dealers boxes
   let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
@@ -135,7 +137,7 @@ function dealButton() {
   for(i = 0; i < playersCardImages.length; i++){
     playersCardImages[i].remove();
   }
-//remove the images within the dealers box
+  //remove the images within the dealers box
   for(j = 0; j < dealersCardImages.length; j++){
     dealersCardImages[j].remove();
   }
@@ -155,8 +157,6 @@ function dealButton() {
     //players and dealers score spans will be set back to the color white
     document.querySelector("#players-result").style.color = "white";
     document.querySelector("#dealers-result").style.color = "white";
-
-  
   
 }
 
@@ -253,31 +253,35 @@ function changeStatus() {
 }
 
 function determineWinner() {
-//let winner;
+var winner;
   if (playersScoreTotal > dealersScoreTotal && playersScoreTotal <= 21) {
-    console.log("player");
+    winner = "playerWins";
   } else if (playersScoreTotal < dealersScoreTotal && dealersScoreTotal <= 21) {
-    console.log("dealer")
+    winner = "dealerWins";
   } else if (playersScoreTotal === dealersScoreTotal && playersScoreTotal <= 21) {
-    console.log("draw")
+    winner = "wasDraw";
   } else if (playersScoreTotal > 21) {
-    console.log("dealer")
+    winner = "dealerWins";
   }
-//return winner;
+
+return winner;
 }
 
-/*
+
+
 function showWinner(winner){
-  if(winner === player){
+
+  if(winner === "playerWins"){
     document.querySelector("#blackjack-result").style.color = 'pink';
     document.querySelector("#blackjack-result").innerHTML = 'Winner is Player';
-  } else if (winner === dealer) {
+  } else if (winner === "dealerWins") {
     document.querySelector("#blackjack-result").style.color = 'red';
     document.querySelector("#blackjack-result").innerHTML = 'Winner is Dealer';
-  } else if (winner === draw) {
+  } else if (winner === "wasDraw") {
     document.querySelector("#blackjack-result").style.color = 'red';
     document.querySelector("#blackjack-result").innerHTML = 'No winner, its a draw';
   }
 } 
 
-*/
+
+
