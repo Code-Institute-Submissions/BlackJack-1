@@ -92,6 +92,19 @@ table, th, td{
     font-weight: 700;
     font-size: 50px;
     color: white;
+    animation-name: hero-zoom;
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes hero-zoom {
+    from { 
+      transform: scale(.75);
+    }
+  
+    to{
+      transform: scale(1.15);
+    }
 }
 
 #title-btns-container {
