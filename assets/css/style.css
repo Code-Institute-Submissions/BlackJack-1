@@ -1,3 +1,6 @@
+/*-- Caprum Font Family taken from Google Fonts --*/
+@import url('https://fonts.googleapis.com/css2?family=Cuprum:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
 html,
 body {
     margin: 0;
@@ -17,7 +20,7 @@ body {
 
 #game-container {
     width: 95%;
-    margin: 1% auto;
+    margin: 2% auto;
     padding: 1%;
     text-align: center;
     border: 4px dashed white;
@@ -85,7 +88,8 @@ table, th, td{
 #header-text {
     text-align: center;
     padding: 3% 0;
-    font-family: "Oswald", sans-serif;
+    font-family: "Caprum", serif;
+    font-weight: 700;
     font-size: 50px;
     color: white;
 }
