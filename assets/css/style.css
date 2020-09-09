@@ -18,63 +18,6 @@ body {
     background-color: #006802 !important;
 }
 
-#game-container {
-    width: 95%;
-    margin: 2% auto;
-    padding: 1%;
-    text-align: center;
-    border: 4px dashed white;
-    border-radius: 10px;
-}
-
-.game-section,
-.controls-section,
-.table-section {
-    display: flex;
-    padding: 10px;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    color: white;
-}
-
-#blackjack-result {
-    color: white;
-}
-
-.game-section div {
-    padding: 10px;
-    flex: 1;
-    height: 300px;
-    text-align: center;
-}
-
-.game-section img {
-    width: 18%;
-    padding: 1%;
-}
-
-.controls-section button {
-    padding: 10px;
-}
-
-.controls-section div {
-    background-color: white;
-    border-radius: 4px;
-    padding: 15px;
-}
-
-
-.table-section {
-    padding: 0;
-    margin: 0 auto;
-}
-
-table, th, td{
-    padding: 10px;
-    border: 1px solid white;
-}
-
 /* ------ title container ----- */
 
 #title-container {
@@ -97,6 +40,7 @@ table, th, td{
     animation-fill-mode: forwards;
 }
 
+/* -- Idea from previous project The Function Band -- */
 @keyframes hero-zoom {
     from { 
       transform: scale(.75);
@@ -145,3 +89,70 @@ table, th, td{
   text-decoration: none;
   cursor: pointer;
 }
+
+
+/* -- Main Game container -- */
+
+#game-container {
+    width: 95%;
+    margin: 2% auto;
+    padding: 1%;
+    text-align: center;
+    border: 4px dashed white;
+    border-radius: 10px;
+}
+
+.game-section,
+.controls-section,
+.table-section {
+    display: flex;
+    padding: 10px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    color: white;
+    text-transform: uppercase;
+    font-family: "Caprum", serif;
+    letter-spacing: 2px;
+}
+
+#blackjack-result {
+    color: white;
+    text-transform: uppercase;
+    font-family: "Caprum", serif;
+    letter-spacing: 2px;
+}
+
+.game-section div {
+    padding: 10px;
+    flex: 1;
+    height: 300px;
+    text-align: center;
+}
+
+.game-section img {
+    width: 18%;
+    padding: 1%;
+}
+
+.controls-section button {
+    padding: 10px;
+}
+
+.controls-section div {
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+
+.table-section {
+    padding: 0;
+    margin: 0 auto;
+}
+
+table, th, td{
+    padding: 10px;
+    border: 1px solid white;
+}
+

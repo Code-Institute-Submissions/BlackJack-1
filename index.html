@@ -11,18 +11,20 @@
 
 </head>
 <body>
-    <!--
-         <div id="title-container">
-        <h2 id="header-text">Let's Play Blackjack</h2>
-        <div id="title-btns-container">
-            <button type="button" id="btnStart" class="btn btn-info btn-lg">Start Game</button>
-            <button type="button" id="btnInstruct" class="btn btn-info btn-lg">How to Play</button>
-        </div>
- 
-    The Modal
-    Structure of modal take from https://www.w3schools.com/howto/howto_css_modals.asp
+<div id="title-container">
+    <!-- music from Youtube Audio Library - DOM not interacted with music, so msuci unable to play
+        <audio id="title-music" src="assets/sounds/titleMusic.mp3" loop="loop" preload="auto"></audio>
+    -->
+    <h2 id="header-text">Let's Play Blackjack</h2>
+    <div id="title-btns-container">
+        <button type="button" id="btnStart" class="btn btn-primary btn-lg">Start Game</button>
+        <button type="button" id="btnInstruct" class="btn btn-primary btn-lg">How to Play</button>
+    </div>
+
+    <!--The Modal-->
+    <!--Structure of modal take from https://www.w3schools.com/howto/howto_css_modals.asp-->
     <div id="myModal" class="modal">
-        Modal content
+        <!--Modal content-->
         <div class="modal-content">
             <span class="close">&times;</span>
             <h2 id="modal-h2">How to Play Blackjack</h2>
@@ -42,20 +44,20 @@
         </div>
     </div>
 </div>
-    -->
+
     
     <!--Container for all of the game section-->
-    <div class="game-container">
+    <div id="game-container">
         <!--Show status of who won or lost the round-->
         <h3><span id="blackjack-result">Let's play</span></h3>
         
         <!--Section for the main game area-->
         <div class="game-section">
             <div id="players-box">
-                <h2>You:<span id="players-result">0</span></h2>
+                <h2>You: <span id="players-result">0</span></h2>
             </div>
             <div id="dealers-box">
-                <h2>Dealer:<span id="dealers-result">0</span></h2>
+                <h2>Dealer: <span id="dealers-result">0</span></h2>
             </div>
         </div>
 
@@ -70,10 +72,10 @@
         </div>
 
         <!--Table for user scores tallied-->
-        <div class="table-sections">
+        <div class="table-section">
         <!-- Keep track of users wins and losses -->
         <!-- Bootstrap created table -->
-        <table id="score-table" class="table table-striped">
+        <table id="score-table">
             <thead>
                 <tr>
                     <th scope="col">Wins</th>
@@ -91,6 +93,6 @@
         </table>
         </div>
     </div>
-
+<script src="assets/scripts/game.js"></script>
 </body>
 </html>

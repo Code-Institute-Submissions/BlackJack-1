@@ -4,10 +4,14 @@ let btnGameInstruct = document.getElementById("btnInstruct");
 let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 let mainGame = document.getElementById("game-container");
+//const titleMusic = document.getElementById("title-music");
 
-//mainGame.style.display = 'none';
+//Sound currently not working as not interacted with DOM yet
+//titleMusic.play();
 
-titleContainer.style.display = 'none';
+mainGame.style.display = 'none';
+
+//titleContainer.style.display = 'none';
 
 // When the user clicks on the button, open the modal
 btnGameInstruct.onclick = function() {
@@ -77,10 +81,10 @@ function hitButtonFunc() {
       //show the players score when the hitButton is clicked
       playersScoreTotal = showPlayersScore();
       changeStatus();
-      document.querySelector("#blackjack-result").innerHTML = "Let's play";
-      document.querySelector("#blackjack-result").style.color = "white";
+      
     }
   dealButton.disabled = true;
+  
 };
 
 //Code for async function to slow down the dealers hand reveals - idea from Clever Programmer - JavaScript Tutorial for Beginners[2020]
@@ -177,7 +181,11 @@ function dealButtonFunc() {
       //players and dealers score spans will be set back to the color white
       document.querySelector("#players-result").style.color = "white";
       document.querySelector("#dealers-result").style.color = "white";
-    hitButton.disabled = false;
+      
+      document.querySelector("#blackjack-result").innerHTML = "Let's play";
+      document.querySelector("#blackjack-result").style.color = "white";
+      
+      hitButton.disabled = false;
 }
 
 //get the players score
