@@ -4,7 +4,6 @@ Deployed Site: https://aprilha3097.github.io/BlackJack/
 
 Blackjack is a simple game of cards. I created this game to challenge my skillset adapting to the complex rules to playing the game blackjack. I created this application using HTML, CSS, Boostrap and Javascript. 
 
-
 ## UX
 
 ## User Stories: 
@@ -23,6 +22,36 @@ Fonts
 
 
 ## Wireframes 
+[Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Starting%20Page.png)
+[Instructions](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Instructions.png)
+[Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Game.png)
+
+## MockUp 
+### Mobile
+[Title Screen]()
+[Instructions]()
+[Main Game]()
+
+### Desktop 
+[Title Screen]()
+[Instructions]()
+[Main Game]()
+
+## Features
+### Exitisting Features 
+* User will first enter site through the title screen - here user will be able to press Play for How to for further instructions
+* User is able to read instructions on how to further play the game with basic details to the game of blackjack
+* When user presses Hit a card will be dealt. User will have to continue to press Hit until they are satisifed with their position. 
+* User will not longer be able to press Hit once 21 has been reached or they have busted, gone over 21
+* When user presses Stay, this ends their turn. User will no longer be able to press Hit
+* When Stay is activiated, the dealers cards will all be dealt 
+* Score will automactially update once dealers turn is over - indicated by the above text and the below table 
+* User will then need to press Deal in order to reset the game, but scores in the below table remain
+
+
+### Features to be implemented 
+* Backend logic of the Ace card should either be 1 or 11. In real Blackjack, Ace can either be 1 or 11 depending on the users choice of where they curently stand in the game. The logic to do this is still in progress, so this is yet to be implemented within the application. 
+* Adding sounds for each onclick of the buttons I would like to implement a card dealing sound for each card being dealt
 
 ## Technologies Used
 
@@ -38,7 +67,9 @@ Fonts
     * Sourced fonts required for site
 
 ## Testing
-[Information on Testing can be found here]()
+[Testing Documentation](https://github.com/aprilha3097/BlackJack/blob/master/testing.md)
+Code Validation
+Manual Testing 
 
 ## Deployment
 
@@ -75,17 +106,7 @@ It can take up to 20 minutes for changes to the site to be published after pushi
 
 For more information on cloning repositories, go [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
 
-Features
-Exitisting Features 
-Features to be implemented 
 
-Testing 
-Code Validation
-Manual Testing 
-
-Deployment 
-How to deploy
-How to run locally 
 
 Credits 
 Music and Sound Effects 
