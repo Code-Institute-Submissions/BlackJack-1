@@ -56,7 +56,7 @@ body {
 }
 
 .controls-section div {
-    background-color: #2F4F4F;
+    background-color: white;
     border-radius: 4px;
     padding: 15px;
 }
@@ -75,8 +75,11 @@ table, th, td{
 /* ------ title container ----- */
 
 #title-container {
-    padding: 8% 0;
-    color: white;
+    position: absolute;
+    top: 20%;
+    left: 25%;
+    right: 25%;
+    margin: 5% auto;
 }
 
 #header-text {
@@ -84,6 +87,7 @@ table, th, td{
     padding: 3% 0;
     font-family: "Oswald", sans-serif;
     font-size: 50px;
+    color: white;
 }
 
 #title-btns-container {
@@ -102,7 +106,6 @@ table, th, td{
   z-index: 1; /* Sits on top */
   background-color: rgb(0,0,0); /* Fallback color */
   background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-
 }
 
 /* Modal Content/Box */
