@@ -124,6 +124,7 @@ body {
     text-transform: uppercase;
     font-family: "Caprum", serif;
     letter-spacing: 2px;
+    font-size: 30px;
 }
 
 .game-section div {
@@ -136,6 +137,11 @@ body {
 .game-section img {
     width: 18%;
     padding: 1%;
+}
+
+#players-box>h2,
+#dealers-box>h2 {
+    font-size: 30px;
 }
 
 .controls-section button {
@@ -188,6 +194,24 @@ table, th, td{
     .modal-content>h4 {
         font-size: 16px;
     }
+
+    #game-container {
+        margin: 15% auto;
+    } 
+    .game-section,
+    .controls-section,
+    .table-section {
+        padding: 5%;
+    }
+
+    #blackjack-result {
+        font-size: 22px;
+    }
+
+    #players-box>h2,
+    #dealers-box>h2 {
+        font-size: 22px;
+    }
 }
 
 /* Extra small devices (400px to 600px) */
@@ -218,6 +242,15 @@ table, th, td{
     .modal-content>h4 {
         font-size: 16px;
     }
+
+    #blackjack-result {
+        font-size: 25px;
+    }
+
+    #players-box>h2,
+    #dealers-box>h2 {
+        font-size: 25px;
+    }
 }
 
 /* Medium devices (600px to 850x) */
@@ -236,6 +269,7 @@ table, th, td{
     .modal-content>ol {
         font-size: 12px;
     }
+
     .modal-content>h4 {
         font-size: 16px;
     }
