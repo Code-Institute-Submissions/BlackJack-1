@@ -1,3 +1,4 @@
+//Defining the title screen variables
 let titleContainer = document.getElementById("title-container");
 let btnStartGame = document.getElementById("btnStart");
 let btnGameInstruct = document.getElementById("btnInstruct");
@@ -11,29 +12,27 @@ let mainGame = document.getElementById("game-container");
 
 mainGame.style.display = 'none';
 
-//titleContainer.style.display = 'none';
-
 // When the user clicks on the button, open the modal
-btnGameInstruct.onclick = function() {
+btnGameInstruct.onclick = function () {
   modal.style.display = "block";
 }
 
 // When the user clicks on <span> (x), close the modal
-span.onclick = function() {
+span.onclick = function () {
   modal.style.display = "none";
 }
 
 // When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
+window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 }
 
 //When the Start Game button is clicked this will take user to main game page
-btnStartGame.addEventListener('click', function() {
-    titleContainer.style.display = 'none';
-    mainGame.style.display = 'block';
+btnStartGame.addEventListener('click', function () {
+  titleContainer.style.display = 'none';
+  mainGame.style.display = 'block';
 });
 
 ////////////////// Main Game Logic
@@ -56,35 +55,33 @@ var dealersScoreTotal = 0;
 //it is the players turn
 var playerHold = false;
 
-//query select the control buttons
+//query selector for the control buttons
 document.querySelector('#btnHit').addEventListener('click', hitButtonFunc);
 document.querySelector('#btnStay').addEventListener('click', stayButtonFunc);
 document.querySelector("#btnDeal").addEventListener('click', dealButtonFunc);
 
+//define the buttons
 let hitButton = document.getElementById("btnHit");
 let stayButton = document.getElementById("btnStay");
 let dealButton = document.getElementById("btnDeal");
 
 function hitButtonFunc() {
-  //it is players turn
   playerHold = false;
   //button will operate only when playersscore is less than 16
-    if(playersScoreTotal < 21) {
-      //a random card is generated
-      let gameCard = randomCard();
-      //gameCardImage will take the random card and it will show the cards image
-      gameCardImagePlayer(gameCard);
-      //update the total score 
-      playersCards.push(gameCard);
-      //push the convertedplayers score array into the playersScore array
-      playersScore = getPlayersScore();
-      //show the players score when the hitButton is clicked
-      playersScoreTotal = showPlayersScore();
-      changeStatus();
-      
-    }
+  if (playersScoreTotal < 21) {
+    //a random card is generated
+    let gameCard = randomCard();
+    //gameCardImage will take the random card and it will show the cards image
+    gameCardImagePlayer(gameCard);
+    //update the total score 
+    playersCards.push(gameCard);
+    //push the convertedplayers score array into the playersScore array
+    playersScore = getPlayersScore();
+    //show the players score when the hitButton is clicked
+    playersScoreTotal = showPlayersScore();
+    changeStatus();
+  }
   dealButton.disabled = true;
-  
 };
 
 //Code for async function to slow down the dealers hand reveals - idea from Clever Programmer - JavaScript Tutorial for Beginners[2020]
@@ -98,8 +95,8 @@ async function stayButtonFunc() {
   playerHold = true;
 
   //while it is not the players turn - dealer will reveal all cards at once
-  while(dealersScoreTotal < 16 && playerHold === true) {
-  //button will operate only when dealersscore is less than 16
+  while (dealersScoreTotal < 16 && playerHold === true) {
+    //button will operate only when dealersscore is less than 16
     //get a random card
     let gameCard = randomCard();
     //assign that new random card to its image
@@ -117,9 +114,7 @@ async function stayButtonFunc() {
   var winner = determineWinner();
   showWinner(winner);
   addToTable(winner);
-
 }
-
 
 //Function to randomise the values
 function randomCard() {
@@ -145,47 +140,45 @@ function gameCardImageDealer(gameCard) {
   document.querySelector('#dealers-box').appendChild(cardImage);
 }
 
-
-
 //When player presses the dealButton 
 function dealButtonFunc() {
   //it is not the players turn
-    playerHold = false;
+  playerHold = false;
 
-    //define variables to select all images within the players and dealers boxes
-    let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
-    let dealersCardImages = document.querySelector("#dealers-box").querySelectorAll('img');
+  //define variables to select all images within the players and dealers boxes
+  let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
+  let dealersCardImages = document.querySelector("#dealers-box").querySelectorAll('img');
 
-    //for loop to remove all of the images within the boxes
-    //remove the images within the players box
-    for(i = 0; i < playersCardImages.length; i++){
-      playersCardImages[i].remove();
-    }
-    //remove the images within the dealers box
-    for(j = 0; j < dealersCardImages.length; j++){
-      dealersCardImages[j].remove();
-    }
+  //for loop to remove all of the images within the boxes
+  //remove the images within the players box
+  for (i = 0; i < playersCardImages.length; i++) {
+    playersCardImages[i].remove();
+  }
+  //remove the images within the dealers box
+  for (j = 0; j < dealersCardImages.length; j++) {
+    dealersCardImages[j].remove();
+  }
 
-    //players and dealers cards to reset 
-    playersCards = [];
-    dealersCards = [];
+  //players and dealers cards to reset 
+  playersCards = [];
+  dealersCards = [];
 
-    //total score counter to reset
-    playersScoreTotal = 0;
-    dealersScoreTotal = 0;
+  //total score counter to reset
+  playersScoreTotal = 0;
+  dealersScoreTotal = 0;
 
-    //players and dealers score spans will be set back to 0
-    document.querySelector("#players-result").innerHTML = 0;
-    document.querySelector("#dealers-result").innerHTML = 0;
+  //players and dealers score spans will be set back to 0
+  document.querySelector("#players-result").innerHTML = 0;
+  document.querySelector("#dealers-result").innerHTML = 0;
 
-      //players and dealers score spans will be set back to the color white
-      document.querySelector("#players-result").style.color = "white";
-      document.querySelector("#dealers-result").style.color = "white";
-      
-      document.querySelector("#blackjack-result").innerHTML = "Let's play";
-      document.querySelector("#blackjack-result").style.color = "white";
-      
-      hitButton.disabled = false;
+  //players and dealers score spans will be set back to the color white
+  document.querySelector("#players-result").style.color = "white";
+  document.querySelector("#dealers-result").style.color = "white";
+
+  document.querySelector("#blackjack-result").innerHTML = "Let's play";
+  document.querySelector("#blackjack-result").style.color = "white";
+
+  hitButton.disabled = false;
 }
 
 //get the players score
@@ -213,7 +206,7 @@ function getDealersScore() {
 
 //function to convert the cardValues to the numerical value
 function getCardNumericValue(toConvertCard) {
-  if(toConvertCard === 'Ace') {
+  if (toConvertCard === 'Ace') {
     return 1;
   } else if (toConvertCard === 'Two') {
     return 2;
@@ -234,7 +227,7 @@ function getCardNumericValue(toConvertCard) {
   } else {
     return 10;
   }
-} 
+}
 
 //simple function to get the sum of values
 function getSum(total, num) {
@@ -255,12 +248,12 @@ function showDealersScore() {
 //change the status to indicate if score has hit 21 or went over 21 and busted
 function changeStatus() {
   //if players score is greater than 21
- if (playersScoreTotal > 21) {
-   //change color to red
+  if (playersScoreTotal > 21) {
+    //change color to red
     document.querySelector("#players-result").style.color = 'Red';
     //change score text to Bust
     document.querySelector("#players-result").innerHTML = 'BUST!';
-  
+
     //if score is equal to 21 change color to green to indicate 21 has been reached
   } else if (playersScoreTotal === 21) {
     document.querySelector("#players-result").style.color = '#45fc03';
@@ -268,12 +261,12 @@ function changeStatus() {
 
   //change status of dealers score if hit 21 or over 21 and busted
   //if dealers score is greater than 21
-  if(dealersScoreTotal > 21) {
+  if (dealersScoreTotal > 21) {
     //change color to red
     document.querySelector("#dealers-result").style.color = 'Red';
     //change score text to Bust
     document.querySelector("#dealers-result").innerHTML = 'BUST!';
-  
+
     //if score is equal to 21 change color to green
   } else if (dealersScoreTotal === 21) {
     document.querySelector("#dealers-result").style.color = '#45fc03';
@@ -282,7 +275,7 @@ function changeStatus() {
 
 //logic to determine who has won each of the rounds
 function determineWinner() {
-var winner;
+  var winner;
   if (playersScoreTotal > dealersScoreTotal && playersScoreTotal <= 21) {
     winner = "playerWins";
   } else if (playersScoreTotal < dealersScoreTotal && dealersScoreTotal <= 21) {
@@ -294,14 +287,13 @@ var winner;
   } else if (dealersScoreTotal > 21 && playersScoreTotal <= 21) {
     winner = "playerWins";
   }
-
-return winner;
+  return winner;
 }
 
 //display the winner in the blackjack-result span
-function showWinner(winner){
+function showWinner(winner) {
 
-  if(winner === "playerWins"){
+  if (winner === "playerWins") {
     document.querySelector("#blackjack-result").style.color = '#45fc03';
     document.querySelector("#blackjack-result").innerHTML = 'WINNER IS PLAYER';
   } else if (winner === "dealerWins") {
@@ -311,16 +303,15 @@ function showWinner(winner){
     document.querySelector("#blackjack-result").style.color = 'Blue';
     document.querySelector("#blackjack-result").innerHTML = "NO WINNER, WAS A DRAW";
   }
-} 
-
+}
 
 //incremeant the table by 1 by who the winner of the round was
 function addToTable(winner) {
- if(winner === "playerWins"){
-   document.querySelector("#wins").innerHTML ++;
- } else if (winner === "dealerWins") {
-  document.querySelector("#losses").innerHTML ++;
- } else if (winner === "wasDraw") {
-  document.querySelector("#draw").innerHTML ++;
- }
+  if (winner === "playerWins") {
+    document.querySelector("#wins").innerHTML++;
+  } else if (winner === "dealerWins") {
+    document.querySelector("#losses").innerHTML++;
+  } else if (winner === "wasDraw") {
+    document.querySelector("#draw").innerHTML++;
+  }
 }
