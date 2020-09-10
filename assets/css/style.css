@@ -57,6 +57,7 @@ body {
 #btnStart,
 #btnInstruct {
     padding: 3% 4%;
+    margin: 1%;
 }
 
 /* ----------------- The Modal (background) */
@@ -66,12 +67,17 @@ body {
   z-index: 1; 
   background-color: rgb(0,0,0); 
   background-color: rgba(0,0,0,0.4);
+    
 }
 
 /* Modal Content/Box */
 .modal-content {
-  margin: 8% auto;
-  padding: 2% 32%; 
+  margin: 10% auto;
+  padding: 2% 30%;
+}
+
+#modal-h2 {
+    text-align: center;
 }
 
 /* The Close Button */
@@ -153,24 +159,84 @@ table, th, td{
 }
 
 /* --- Media Queries --- */ 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+
+/* Extra small devices (0 to 400px) */
+@media only screen and (max-width: 400px) {
+    
     #header-text {
-        font-size: 38px;
+        font-size: 30px;
+    }
+    
+    #btnStart,
+    #btnInstruct {
+    font-size: 12px;
+    }
+
+    .modal-content {
+        margin: 20% auto;
+        padding: 2% 12%;
+    }
+
+    #modal-h2 {
+        font-size: 20px;
+    }
+    
+    .modal-content>p,
+    .modal-content>ol {
+        font-size: 12px;
+    }
+    .modal-content>h4 {
+        font-size: 16px;
     }
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/* Extra small devices (400px to 600px) */
+@media only screen and (min-width: 401px) and (max-width: 600px) {
 
-}
+    #header-text {
+        font-size: 40px;
+    }
 
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+    #btnStart,
+    #btnInstruct {
+        font-size: 12px;
+    }
 
-}
+    .modal-content {
+        margin: 20% auto;
+        padding: 2% 20%;
+    }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+    #modal-h2 {
+        font-size: 20px;
+    }
     
+    .modal-content>p,
+    .modal-content>ol {
+        font-size: 12px;
+    }
+    .modal-content>h4 {
+        font-size: 16px;
+    }
+}
+
+/* Medium devices (600px to 850x) */
+@media only screen and (min-width: 601px) and (max-width: 800px) {
+
+    .modal-content {
+        margin: 15% auto;
+        padding: 2% 28%;
+    }
+
+    #modal-h2 {
+        font-size: 20px;
+    }
+    
+    .modal-content>p,
+    .modal-content>ol {
+        font-size: 12px;
+    }
+    .modal-content>h4 {
+        font-size: 16px;
+    }
 }
