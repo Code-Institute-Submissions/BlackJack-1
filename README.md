@@ -1,32 +1,28 @@
 # BlackJack
 
+Milestone Project # 2 - Interactive Frontend Development
+
 Deployed Site: https://aprilha3097.github.io/BlackJack/
 
 Blackjack is a simple game of cards. I created this game to challenge my skillset adapting to the complex rules to playing the game blackjack. I created this application using HTML, CSS, Boostrap and Javascript. 
 
 ## UX
 
-## User Stories: 
-As a user, I want a start button to initialise the game. 
-As a user, I want to reset the game whenever I want.
-As a user, I want to have options to Stay or Bet, so that I can decide my next move.
-As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself.
-As a user, I want to know who has one that round. 
-As a user, I want to know where I am in terms of winning and lossing. 
-
-
 ## Design Choices
 Colors
 Colors are a simple green background resembling the blackjack tables at casinos
 Fonts
+- [Cuprum](https://fonts.google.com/specimen/Cuprum?query=cupru)
+Source: Google Fonts
 
 
 ## Wireframes 
+* The wireframes for the initial layout of the webiste was created using [Adobe XD](https://www.adobe.com/uk/products/xd.html). 
 [Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Starting%20Page.png)
 [Instructions](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Instructions.png)
 [Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Game.png)
 
-## MockUp 
+## MockUp / Final Designs
 ### Mobile
 [Title Screen]()
 [Instructions]()
@@ -36,6 +32,14 @@ Fonts
 [Title Screen]()
 [Instructions]()
 [Main Game]()
+
+## User Stories: 
+As a user, I want a start button to initialise the game. 
+As a user, I want to reset the game whenever I want.
+As a user, I want to have options to Stay or Bet, so that I can decide my next move.
+As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself.
+As a user, I want to know who has one that round. 
+As a user, I want to know where I am in terms of winning and lossing. 
 
 ## Features
 ### Exitisting Features 
@@ -65,14 +69,16 @@ Fonts
     * The programming langauge to program specific behaviors for the application
 5. [Google Fonts](https://fonts.google.com/)
     * Sourced fonts required for site
+6. [Visual Studio Code](https://code.visualstudio.com/)
+    * The code editing sowftware that was used for the creation of this project
 
 ## Testing
+You can view more in depth of the testing done for this project in the following document: 
 [Testing Documentation](https://github.com/aprilha3097/BlackJack/blob/master/testing.md)
-Code Validation
-Manual Testing 
 
 ## Deployment
 
+This project was developed using VIsual Studio Code and version control done using Git. 
 The site has been deployed using Github Pages, which is sourced directly from my Master branch:
 https://aprilha3097.github.io/BlackJack/
 
@@ -108,16 +114,29 @@ For more information on cloning repositories, go [here](https://help.github.com/
 
 
 
-Credits 
-Music and Sound Effects 
-Images
-Code Credits 
-Acknowledgments 
-Learning Resources 
+## Credits 
 
-Disclamir 
+### Music and Sound Effects 
 
+* The music for the introduction section: 
+"Carroll Park (Sting) - John Deley and the 41 Players"
+From - [Youtube Audio Library](https://studio.youtube.com/channel/UCMpUi4n6yKE9K8o_VYkM_jA/music?utm_campaign=upgrade&utm_medium=redirect&utm_source=%2Faudiolibrary%2Fmusic)
 
-Deck of cards png downloads:
+* Images of Deck of Cards: 
 http://acbl.mybigcommerce.com/52-playing-cards/
+
+### Code Credits 
+1. The pop up modal for the instructions in the title screen was obtained from [W3Schools How To](https://www.w3schools.com/howto/howto_css_modals.asp)
+2. The code for the async function to delay the dealers hand function was obtained from the [Clever Programmer - Javascript Tutorial](https://www.youtube.com/watch?v=Qqx_wzMmFeA)
+3. The code to get the sum of an array of numbers obtainer from [W3Schools reduce() Method](https://www.w3schools.com/jsref/jsref_reduce.asp)
+4. [Stack Overflor](https://stackoverflow.com/) was a great resource for many difficult problems I've come across during the development of this page  
+
+### Learning Resources 
+- [Code Institute](https://codeinstitute.net/about-us/)
+- [CodeCademy](https://www.codecademy.com/)
+- "JAVASCRIPT & JQUERY Interactive Front-end Web Development" by Jon Duckett
+- Colt Steel's [The Web Developer Bootcamp](https://www.udemy.com/course/the-web-developer-bootcamp/)
+- [W3Schools](https://www.w3schools.com/)
+
+
 
