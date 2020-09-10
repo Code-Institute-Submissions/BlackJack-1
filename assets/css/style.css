@@ -19,7 +19,6 @@ body {
 }
 
 /* ------ title container ----- */
-
 #title-container {
     position: absolute;
     top: 20%;
@@ -61,12 +60,12 @@ body {
 }
 
 /* ----------------- The Modal (background) */
-
+/* -- Code credit to the W3Schools on how to implement this feature -- */
 .modal {
-  display: none; /* Hidden by default */
-  z-index: 1; /* Sits on top */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: none;
+  z-index: 1; 
+  background-color: rgb(0,0,0); 
+  background-color: rgba(0,0,0,0.4);
 }
 
 /* Modal Content/Box */
@@ -90,9 +89,7 @@ body {
   cursor: pointer;
 }
 
-
 /* -- Main Game container -- */
-
 #game-container {
     width: 95%;
     margin: 2% auto;
@@ -145,7 +142,6 @@ body {
     padding: 15px;
 }
 
-
 .table-section {
     padding: 0;
     margin: 0 auto;
@@ -156,3 +152,25 @@ table, th, td{
     border: 1px solid white;
 }
 
+/* --- Media Queries --- */ 
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    #header-text {
+        font-size: 38px;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    
+}
