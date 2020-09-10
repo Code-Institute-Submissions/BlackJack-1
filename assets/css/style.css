@@ -193,11 +193,14 @@ table, th, td{
     }
     .modal-content>h4 {
         font-size: 16px;
+        padding: 2% 1%;
     }
 
     #game-container {
         margin: 15% auto;
+        padding: 5% 1%;
     } 
+
     .game-section,
     .controls-section,
     .table-section {
@@ -235,6 +238,11 @@ table, th, td{
         font-size: 20px;
     }
     
+    #game-container {
+        margin: 15% auto;
+        padding: 5% 1%;
+    }
+
     .modal-content>p,
     .modal-content>ol {
         font-size: 12px;
@@ -272,5 +280,10 @@ table, th, td{
 
     .modal-content>h4 {
         font-size: 16px;
+    }
+
+    #game-container {
+        margin: 15% auto;
+        padding: 6% 1%;
     }
 }
