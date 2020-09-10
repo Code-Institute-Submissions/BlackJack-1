@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,47 +11,48 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 </head>
+
 <body>
-<div id="title-container">
-    <!-- music from Youtube Audio Library - DOM not interacted with music, so msuci unable to play
+
+    <div id="title-container">
+        <!-- music from Youtube Audio Library - DOM not interacted with music, so msuci unable to play
         <audio id="title-music" src="assets/sounds/titleMusic.mp3" loop="loop" preload="auto"></audio>
     -->
-    <h2 id="header-text">Let's Play Blackjack</h2>
-    <div id="title-btns-container">
-        <button type="button" id="btnStart" class="btn btn-primary btn-lg">Start Game</button>
-        <button type="button" id="btnInstruct" class="btn btn-primary btn-lg">How to Play</button>
-    </div>
+        <h2 id="header-text">Let's Play Blackjack</h2>
+        <div id="title-btns-container">
+            <button type="button" id="btnStart" class="btn btn-primary btn-lg">Start Game</button>
+            <button type="button" id="btnInstruct" class="btn btn-primary btn-lg">How to Play</button>
+        </div>
 
-    <!--The Modal-->
-    <!--Structure of modal take from https://www.w3schools.com/howto/howto_css_modals.asp-->
-    <div id="myModal" class="modal">
-        <!--Modal content-->
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2 id="modal-h2">How to Play Blackjack</h2>
-            <p>The goal of blackjack is to beat the dealer's hand without going over 21.</p>
-            <h4>Card Values</h4>
-            <ol>
-                <li>Face cards are worth 10</li>
-                <li>Aces are worth 1 or 11, whichever makes a better hand</li>
-                <li>Numerical value of a card is its value</li>
-            </ol>
-            <h4>How to play</h4>
-            <ol>
-                <li>Press <strong>Hit</strong> to deal another card</li>
-                <li>Press <strong>Stay</strong> to hold your current total and end your turn.</li>
-                <li>If you go over 21 you bust</li>
-            </ol>
+        <!--The Modal-->
+        <!--Structure of modal take from https://www.w3schools.com/howto/howto_css_modals.asp-->
+        <div id="myModal" class="modal">
+            <!--Modal content-->
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2 id="modal-h2">How to Play Blackjack</h2>
+                <p>The goal of blackjack is to beat the dealer's hand without going over 21.</p>
+                <h4>Card Values</h4>
+                <ol>
+                    <li>Face cards are worth 10</li>
+                    <li>Aces are worth 1 or 11, whichever makes a better hand</li>
+                    <li>Numerical value of a card is its value</li>
+                </ol>
+                <h4>How to play</h4>
+                <ol>
+                    <li>Press <strong>Hit</strong> to deal another card</li>
+                    <li>Press <strong>Stay</strong> to hold your current total and end your turn.</li>
+                    <li>If you go over 21 you bust</li>
+                </ol>
+            </div>
         </div>
     </div>
-</div>
 
-    
     <!--Container for all of the game section-->
     <div id="game-container">
         <!--Show status of who won or lost the round-->
         <h3><span id="blackjack-result">Let's play</span></h3>
-        
+
         <!--Section for the main game area-->
         <div class="game-section">
             <div id="players-box">
@@ -73,26 +75,27 @@
 
         <!--Table for user scores tallied-->
         <div class="table-section">
-        <!-- Keep track of users wins and losses -->
-        <!-- Bootstrap created table -->
-        <table id="score-table">
-            <thead>
-                <tr>
-                    <th scope="col">Wins</th>
-                    <th scope="col">Losses</th>
-                    <th scope="col">Draws</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><span id="wins">0</span></td>
-                    <td><span id="losses">0</span></td>
-                    <td><span id="draw">0</span></td>
-                </tr>
-            </tbody>
-        </table>
+            <!-- Keep track of users wins and losses -->
+            <table id="score-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Wins</th>
+                        <th scope="col">Losses</th>
+                        <th scope="col">Draws</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><span id="wins">0</span></td>
+                        <td><span id="losses">0</span></td>
+                        <td><span id="draw">0</span></td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
     </div>
-<script src="assets/scripts/game.js"></script>
+    <!-- Javascript -->
+    <script src="assets/scripts/game.js"></script>
 </body>
+
 </html>
