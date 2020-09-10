@@ -215,6 +215,11 @@ table, th, td{
     #dealers-box>h2 {
         font-size: 22px;
     }
+
+    .game-section img {
+        width: 40%;
+        padding: 1%;
+    }
 }
 
 /* Extra small devices (400px to 600px) */
@@ -259,6 +264,11 @@ table, th, td{
     #dealers-box>h2 {
         font-size: 25px;
     }
+
+    .game-section img {
+        width: 30%;
+        padding: 1%;
+    }
 }
 
 /* Medium devices (600px to 850x) */
@@ -285,5 +295,10 @@ table, th, td{
     #game-container {
         margin: 15% auto;
         padding: 6% 1%;
+    }
+
+    .game-section img {
+        width: 25%;
+        padding: 1%;
     }
 }
