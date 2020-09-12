@@ -5,12 +5,9 @@ let btnGameInstruct = document.getElementById("btnInstruct");
 let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 let mainGame = document.getElementById("game-container");
-//const titleMusic = document.getElementById("title-music");
 
-//Sound currently not working as not interacted with DOM yet
-//titleMusic.play();
-
-mainGame.style.display = 'none';
+//mainGame.style.display = 'none';
+titleContainer.style.display = 'none';
 
 // When the user clicks on the button, open the modal
 btnGameInstruct.onclick = function () {

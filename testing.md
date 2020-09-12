@@ -1,5 +1,9 @@
 Code Validation
 
+HTML - HTML markup has passed and no errors were found https://validator.w3.org/
+CSS - CSS has been checked with this site and no error has been found https://jigsaw.w3.org/css-validator/
+JavaScript - https://jshint.com/ 
+
 Testing Against user stories
 
 Manual Testing 
