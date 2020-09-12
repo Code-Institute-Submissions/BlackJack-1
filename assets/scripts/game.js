@@ -8,23 +8,22 @@ let mainGame = document.getElementById("game-container");
 
 mainGame.style.display = 'none';
 
-
 // When the user clicks on the button, open the modal
 btnGameInstruct.onclick = function () {
   modal.style.display = "block";
-}
+};
 
 // When the user clicks on <span> (x), close the modal
 span.onclick = function () {
   modal.style.display = "none";
-}
+};
 
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
-}
+};
 
 //When the Start Game button is clicked this will take user to main game page
 btnStartGame.addEventListener('click', function () {
@@ -35,7 +34,7 @@ btnStartGame.addEventListener('click', function () {
 ////////////////// Main Game Logic
 
 //define the cardValues in an array
-let cardValues = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two']
+let cardValues = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two'];
 
 //array for the the set of cards
 var playersCards = [];
@@ -59,7 +58,6 @@ document.querySelector("#btnDeal").addEventListener('click', dealButtonFunc);
 
 //define the buttons
 let hitButton = document.getElementById("btnHit");
-let stayButton = document.getElementById("btnStay");
 let dealButton = document.getElementById("btnDeal");
 
 function hitButtonFunc() {
@@ -79,7 +77,7 @@ function hitButtonFunc() {
     changeStatus();
   }
   dealButton.disabled = true;
-};
+}
 
 //Code for async function to slow down the dealers hand reveals - idea from Clever Programmer - JavaScript Tutorial for Beginners[2020]
 function sleep(ms) {
@@ -117,7 +115,7 @@ async function stayButtonFunc() {
 function randomCard() {
   const randomIndex = Math.floor(Math.random() * 13);
   return cardValues[randomIndex];
-};
+}
 
 //Whenever the HIT button is clicked a card will be shown
 function gameCardImagePlayer(gameCard) {
@@ -188,7 +186,7 @@ function getPlayersScore() {
     convertedArray.push(converted);
   }
   return convertedArray;
-};
+}
 
 function getDealersScore() {
   var convertedArray = [];
@@ -199,7 +197,7 @@ function getDealersScore() {
     convertedArray.push(converted);
   }
   return convertedArray;
-};
+}
 
 //function to convert the cardValues to the numerical value
 function getCardNumericValue(toConvertCard) {
