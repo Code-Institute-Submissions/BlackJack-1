@@ -40,9 +40,9 @@ Source: Google Fonts
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_mainGame.png" width="500">
 
 ### Mobile
-#### Title Screen
+#### Title Screen and Main Game
 <div align="center">
-<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="200"> <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="200">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="300">   <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="300">
 </div>
 
 ## User Stories: 
