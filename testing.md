@@ -1,8 +1,11 @@
-Code Validation
+## Testing
+The below outlines the testing that was carried out for each of the major features of the site as well as manual testing of site responsivness of various browsers and devices. 
 
-HTML - HTML markup has passed and no errors were found  using the [W3 Validator](https://validator.w3.org/)
-CSS - CSS has been checked and no error has been found using the [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
-JavaScript - JavsScript has been checked with no errors, but with 25 warnings in regards to ES6 - [JSHint](https://jshint.com/) 
+### Code Validation
+
+- HTML - HTML markup has passed and no errors were found  using the [W3 Validator](https://validator.w3.org/)
+- CSS - CSS has been checked and no error has been found using the [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
+- JavaScript - JavsScript has been checked with no errors, but with 25 warnings in regards to ES6 - [JSHint](https://jshint.com/) 
 
 ## Testing Against user stories
 
