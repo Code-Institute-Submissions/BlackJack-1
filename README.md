@@ -45,7 +45,7 @@ Source: Google Fonts
 ### Mobile
 #### Title Screen and Main Game
 <div align="center">
-<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="300">   <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="300">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="300">        <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="300">
 </div>
 
 ## User Stories: 
@@ -90,6 +90,7 @@ As a user, I want to know where I am in terms of winning and lossing
 
 ## Testing
 You can view more in depth of the testing done for this project in the following document: 
+
 [Testing Documentation](https://github.com/aprilha3097/BlackJack/blob/master/testing.md)
 
 ## Deployment
@@ -113,16 +114,16 @@ It can take up to 20 minutes for changes to the site to be published after pushi
 
 1. On the [repository page](https://github.com/aprilha3097/BlackJack), click on the Clone or Download button
 
-    <img src="https://github.com/aprilha3097/BlackJack/blob/master/how_to_deploy_examples/button.png" width="400">
+    <img src="https://github.com/aprilha3097/BlackJack/blob/master/README_imgs/button.png" width="400">
 
 2. To clone the site with HTTPS, copy the following URL
 
-    <img src="https://github.com/aprilha3097/BlackJack/blob/master/how_to_deploy_examples/clone_or_download.png" width="400">
+    <img src="https://github.com/aprilha3097/BlackJack/blob/master/README_imgs/clone_or_download.png" width="400">
 
 3. Open Terminal and change the directory to where you want the cloned directory to be
 4. Type git clone and then paste the previous URL from earlier into your terminal
 
-    <img src="https://github.com/aprilha3097/BlackJack/blob/master/how_to_deploy_examples/git_clone.png" width="500">
+    <img src="https://github.com/aprilha3097/BlackJack/blob/master/README_imgs/git_clone.png" width="500">
 
 5. Press Enter to download all of the material from the respository locally to your machine 
 
