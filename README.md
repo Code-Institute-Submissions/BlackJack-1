@@ -6,7 +6,9 @@ Deployed Site: https://aprilha3097.github.io/BlackJack/
 
 Blackjack is a simple game of cards. I created this game to challenge my skillset adapting to the complex rules to playing the game blackjack. I created this application using HTML, CSS, Boostrap and Javascript. 
 
+<div align="center">
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile_responsive_example.png" width="600">
+</div>
 
 ## UX
 
