@@ -42,12 +42,7 @@ Source: Google Fonts
 ### Mobile
 #### Title Screen
 <div align="center">
-<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="200">
-</div>
-
-#### Main Game
-<div align="center">
-<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="200">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="200"> <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="200">
 </div>
 
 ## User Stories: 
