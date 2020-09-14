@@ -6,6 +6,8 @@ Deployed Site: https://aprilha3097.github.io/BlackJack/
 
 Blackjack is a simple game of cards. I created this game to challenge my skillset adapting to the complex rules to playing the game blackjack. I created this application using HTML, CSS, Boostrap and Javascript. 
 
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile_responsive_example.png" width="400">
+
 ## UX
 
 ## Design Choices
@@ -56,6 +58,7 @@ As a user, I want to know where I am in terms of winning and lossing.
 ### Features to be implemented 
 * Backend logic of the Ace card should either be 1 or 11. In real Blackjack, Ace can either be 1 or 11 depending on the users choice of where they curently stand in the game. The logic to do this is still in progress, so this is yet to be implemented within the application. 
 * Adding sounds for each onclick of the buttons I would like to implement a card dealing sound for each card being dealt
+* Adding a music in the background onload of the application during the title screen
 
 ## Technologies Used
 
