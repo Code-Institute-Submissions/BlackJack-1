@@ -13,12 +13,12 @@ Blackjack is a simple game of cards. I created this game to challenge my skillse
 ## UX
 
 ## Design Choices
-Colors
+### Colors
 Colors are a simple green background resembling the blackjack tables at casinos
-Fonts
+
+### Fonts
 - [Cuprum](https://fonts.google.com/specimen/Cuprum?query=cupru)
 Source: Google Fonts
-
 
 ## Wireframes 
 * The wireframes for the initial layout of the webiste was created using [Adobe XD](https://www.adobe.com/uk/products/xd.html). 
@@ -29,23 +29,36 @@ Source: Google Fonts
 [Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Game.png)
 
 ## MockUp / Final Designs
+* The final mockups were created using [Adobe XD](https://www.adobe.com/uk/products/xd.html).
 ### Mobile
-[Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png)
+#### Title Screen
+<div align="center">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="400">
+</div>
 
-[Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png)
+#### Main Game
+<div align="center">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="400">
+</div>
 
 ### Desktop 
-[Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_titleScreen.png)
+#### Title Screen
+<div align="center">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_titleScreen.png" width="400">
+</div>
 
-[Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_mainGame.png)
+#### Main Game
+<div align="center">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_mainGame.png" width="400">
+</div>
 
 ## User Stories: 
-As a user, I want a start button to initialise the game. 
-As a user, I want to reset the game whenever I want.
-As a user, I want to have options to Stay or Bet, so that I can decide my next move.
-As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself.
-As a user, I want to know who has one that round. 
-As a user, I want to know where I am in terms of winning and lossing. 
+As a user, I want a start button to initialise the game
+As a user, I want to reset the game whenever I want
+As a user, I want to have options to Stay or Bet, so that I can decide my next move
+As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
+As a user, I want to know who has one that round
+As a user, I want to know where I am in terms of winning and lossing
 
 ## Features
 ### Exitisting Features 
