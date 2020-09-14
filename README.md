@@ -33,11 +33,14 @@ Source: Google Fonts
 
 ### Desktop 
 #### Title Screen
-
+<div align="center">
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_titleScreen.png" width="500">
+</div>
 
 #### Main Game
+<div align="center">
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_mainGame.png" width="500">
+</div>
 
 ### Mobile
 #### Title Screen and Main Game
