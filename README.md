@@ -28,14 +28,12 @@ Source: Google Fonts
 
 ## MockUp / Final Designs
 ### Mobile
-[Title Screen]()
-[Instructions]()
-[Main Game]()
+[Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png)
+[Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png)
 
 ### Desktop 
-[Title Screen]()
-[Instructions]()
-[Main Game]()
+[Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_titleScreen.png)
+[Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_mainGame.png)
 
 ## User Stories: 
 As a user, I want a start button to initialise the game. 
