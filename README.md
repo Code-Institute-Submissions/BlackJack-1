@@ -30,26 +30,24 @@ Source: Google Fonts
 
 ## MockUp / Final Designs
 * The final mockups were created using [Adobe XD](https://www.adobe.com/uk/products/xd.html).
-### Mobile
-#### Title Screen
-<div align="center">
-<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="400">
-</div>
-
-#### Main Game
-<div align="center">
-<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="400">
-</div>
 
 ### Desktop 
 #### Title Screen
+
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_titleScreen.png" width="500">
+
+#### Main Game
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_mainGame.png" width="500">
+
+### Mobile
+#### Title Screen
 <div align="center">
-<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_titleScreen.png" width="400">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="200">
 </div>
 
 #### Main Game
 <div align="center">
-<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_mainGame.png" width="400">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="200">
 </div>
 
 ## User Stories: 
