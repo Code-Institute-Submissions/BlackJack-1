@@ -290,13 +290,13 @@ function showWinner(winner) {
 
   if (winner === "playerWins") {
     document.querySelector("#blackjack-result").style.color = '#45fc03';
-    document.querySelector("#blackjack-result").innerHTML = 'WINNER IS PLAYER';
+    document.querySelector("#blackjack-result").innerHTML = 'YOU WON';
   } else if (winner === "dealerWins") {
     document.querySelector("#blackjack-result").style.color = 'Red';
-    document.querySelector("#blackjack-result").innerHTML = 'WINNER IS DEALER';
+    document.querySelector("#blackjack-result").innerHTML = 'YOU LOST, DEALER WINS';
   } else if (winner === "wasDraw") {
     document.querySelector("#blackjack-result").style.color = 'Blue';
-    document.querySelector("#blackjack-result").innerHTML = "NO WINNER, WAS A DRAW";
+    document.querySelector("#blackjack-result").innerHTML = "NO WINNER";
   }
 }
 
