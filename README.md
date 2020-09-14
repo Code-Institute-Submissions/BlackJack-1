@@ -50,12 +50,12 @@ Source: Google Fonts
 </div>
 
 ## User Stories: 
-As a user, I want a start button to initialise the game
-As a user, I want to reset the game whenever I want
-As a user, I want to have options to Stay or Bet, so that I can decide my next move
-As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
-As a user, I want to know who has one that round
-As a user, I want to know where I am in terms of winning and lossing
+* As a user, I want a start button to initialise the game
+* As a user, I want to reset the game whenever I want
+* As a user, I want to have options to Stay or Bet, so that I can decide my next move
+* As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
+* As a user, I want to know who has one that round
+* As a user, I want to know where I am in terms of winning and lossing
 
 ## Features
 ### Exitisting Features 
