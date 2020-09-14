@@ -23,16 +23,20 @@ Source: Google Fonts
 ## Wireframes 
 * The wireframes for the initial layout of the webiste was created using [Adobe XD](https://www.adobe.com/uk/products/xd.html). 
 [Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Starting%20Page.png)
+
 [Instructions](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Instructions.png)
+
 [Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Game.png)
 
 ## MockUp / Final Designs
 ### Mobile
 [Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png)
+
 [Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png)
 
 ### Desktop 
 [Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_titleScreen.png)
+
 [Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/desktop/desktop_mainGame.png)
 
 ## User Stories: 
