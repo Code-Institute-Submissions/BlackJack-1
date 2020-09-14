@@ -18,6 +18,7 @@ Colors are a simple green background resembling the blackjack tables at casinos
 
 ### Fonts
 - [Cuprum](https://fonts.google.com/specimen/Cuprum?query=cupru)
+
 Source: Google Fonts
 
 ## Wireframes 
@@ -70,8 +71,11 @@ As a user, I want to know where I am in terms of winning and lossing
 
 ### Features to be implemented 
 * Backend logic of the Ace card should either be 1 or 11. In real Blackjack, Ace can either be 1 or 11 depending on the users choice of where they curently stand in the game. The logic to do this is still in progress, so this is yet to be implemented within the application. 
+* OR a prompt can be available for when an ACE card is drawn. User can choose between 1 or 11 to be the value they wanted added to their score. 
 * Adding sounds for each onclick of the buttons I would like to implement a card dealing sound for each card being dealt
 * Adding a music in the background onload of the application during the title screen
+* Fix responsivness of site for mobile view forcing site to be used horizontally on mobile view - this allows the card images to be more visable and larger
+* Add logic so when user goes Bust the dealers cards will get drawn immediately, as user does not need to "stay" as they have already lost
 
 ## Technologies Used
 
@@ -89,9 +93,7 @@ As a user, I want to know where I am in terms of winning and lossing
     * The code editing sowftware that was used for the creation of this project
 
 ## Testing
-You can view more in depth of the testing done for this project in the following document: 
-
-[Testing Documentation](https://github.com/aprilha3097/BlackJack/blob/master/testing.md)
+You can view more in depth of the testing done for this project in the following document: [Testing Documentation](https://github.com/aprilha3097/BlackJack/blob/master/testing.md)
 
 ## Deployment
 
@@ -128,7 +130,6 @@ It can take up to 20 minutes for changes to the site to be published after pushi
 5. Press Enter to download all of the material from the respository locally to your machine 
 
 For more information on cloning repositories, go [here](https://help.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository)
-
 
 
 ## Credits 
