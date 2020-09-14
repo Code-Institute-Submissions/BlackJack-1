@@ -75,7 +75,9 @@ function hitButtonFunc() {
     //show the players score when the hitButton is clicked
     playersScoreTotal = showPlayersScore();
     changeStatus();
-  }
+    document.querySelector("#blackjack-result").innerHTML = "Let's Play";
+    document.querySelector("#blackjack-result").style.color = "white";
+  }  
   dealButton.disabled = true;
 }
 
