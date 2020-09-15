@@ -33,6 +33,10 @@ btnStartGame.addEventListener('click', function () {
 
 ////////////////// Main Game Logic
 
+const winSound = new Audio("assets/sounds/win.mp3");
+const lossSound = new Audio("assets/sounds/lose.mp3");
+const hitSound = new Audio("assets/sounds/hit.wav");
+
 //define the cardValues in an array
 let cardValues = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven', 'Six', 'Five', 'Four', 'Three', 'Two'];
 
@@ -77,6 +81,7 @@ function hitButtonFunc() {
     changeStatus();
     document.querySelector("#blackjack-result").innerHTML = "Let's Play";
     document.querySelector("#blackjack-result").style.color = "white";
+    hitSound.play();
   }  
   dealButton.disabled = true;
 }
@@ -106,6 +111,7 @@ async function stayButtonFunc() {
     changeStatus();
     hitButton.disabled = true;
     dealButton.disabled = false;
+    hitSound.play();
     await sleep(700);
   }
   var winner = determineWinner();
@@ -293,9 +299,11 @@ function showWinner(winner) {
   if (winner === "playerWins") {
     document.querySelector("#blackjack-result").style.color = '#45fc03';
     document.querySelector("#blackjack-result").innerHTML = 'YOU WON';
+    winSound.play();
   } else if (winner === "dealerWins") {
     document.querySelector("#blackjack-result").style.color = 'Red';
     document.querySelector("#blackjack-result").innerHTML = 'YOU LOST, DEALER WINS';
+    lossSound.play();
   } else if (winner === "wasDraw") {
     document.querySelector("#blackjack-result").style.color = 'Blue';
     document.querySelector("#blackjack-result").innerHTML = "NO WINNER";
