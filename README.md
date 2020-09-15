@@ -147,7 +147,8 @@ http://acbl.mybigcommerce.com/52-playing-cards/
 1. The pop up modal for the instructions in the title screen was obtained from [W3Schools How To](https://www.w3schools.com/howto/howto_css_modals.asp)
 2. The code for the async function to delay the dealers hand function was obtained from the [Clever Programmer - Javascript Tutorial](https://www.youtube.com/watch?v=Qqx_wzMmFeA)
 3. The code to get the sum of an array of numbers obtainer from [W3Schools reduce() Method](https://www.w3schools.com/jsref/jsref_reduce.asp)
-4. [Stack Overflor](https://stackoverflow.com/) was a great resource for many difficult problems I've come across during the development of this page  
+4. [Stack Overflow](https://stackoverflow.com/) was a great resource for many difficult problems I've come across during the development of this page  
+5. For the animation to ask users to rotate device when on not desktop devices was obtained from [arscan / pleaserotate.js](https://github.com/arscan/pleaserotate.js)
 
 ### Learning Resources 
 - [Code Institute](https://codeinstitute.net/about-us/)
