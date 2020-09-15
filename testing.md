@@ -49,7 +49,7 @@ The game was intended to be responsive for mobile, tablet and desktop use.
 The below is an overview of the responsive testing results from the above browser sites
 
 <div align="center">
-<img src="https://github.com/aprilha3097/BlackJack/blob/master/README_imgs/testing_matrix.png" width="600">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/README_imgs/testing_matrix.png" width="800">
 </div>
 
 Bugs?
