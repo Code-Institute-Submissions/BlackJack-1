@@ -5,7 +5,9 @@ let btnGameInstruct = document.getElementById("btnInstruct");
 let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 let mainGame = document.getElementById("game-container");
+const titleMusic = new Audio ("assets/sounds/titleMusic.mp3");
 
+//hides the main game container for the title screen to be active
 mainGame.style.display = 'none';
 
 // When the user clicks on the button, open the modal
@@ -33,6 +35,7 @@ btnStartGame.addEventListener('click', function () {
 
 ////////////////// Main Game Logic
 
+//Defined and added the audio files that will be used in site
 const winSound = new Audio("assets/sounds/win.mp3");
 const lossSound = new Audio("assets/sounds/lose.mp3");
 const hitSound = new Audio("assets/sounds/hit.wav");
@@ -44,7 +47,7 @@ let cardValues = ['Ace', 'King', 'Queen', 'Jack', 'Ten', 'Nine', 'Eight', 'Seven
 var playersCards = [];
 let dealersCards = [];
 
-//array for the scores from the cards values to numerical values
+//array of the score values from the cards values that was converted to its numerical values
 var playersScore = [];
 var dealersScore = [];
 
@@ -52,7 +55,7 @@ var dealersScore = [];
 var playersScoreTotal = 0;
 var dealersScoreTotal = 0;
 
-//it is the players turn
+//if it is the players turn playerHold will be false
 var playerHold = false;
 
 //query selector for the control buttons
@@ -64,6 +67,7 @@ document.querySelector("#btnDeal").addEventListener('click', dealButtonFunc);
 let hitButton = document.getElementById("btnHit");
 let dealButton = document.getElementById("btnDeal");
 
+//if user presses Hit, users cards will be dealt
 function hitButtonFunc() {
   playerHold = false;
   //button will operate only when playersscore is less than 16
@@ -72,7 +76,7 @@ function hitButtonFunc() {
     let gameCard = randomCard();
     //gameCardImage will take the random card and it will show the cards image
     gameCardImagePlayer(gameCard);
-    //update the total score 
+    //updates the total score 
     playersCards.push(gameCard);
     //push the convertedplayers score array into the playersScore array
     playersScore = getPlayersScore();
@@ -83,6 +87,7 @@ function hitButtonFunc() {
     document.querySelector("#blackjack-result").style.color = "white";
     hitSound.play();
   }  
+  //disables Deal button, so user will not be able to press while it is their turn
   dealButton.disabled = true;
 }
 
@@ -91,9 +96,9 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-//When players hits stay - this will deal out the dealers cards adn score
+//When player hits stay - this will deal out the dealers cards and update dealers score
 async function stayButtonFunc() {
-  //it is not the players turn
+  //it is not the players turn it is the dealers turn
   playerHold = true;
 
   //while it is not the players turn - dealer will reveal all cards at once
@@ -107,36 +112,42 @@ async function stayButtonFunc() {
     dealersCards.push(gameCard);
     //get dealersScore by converting the dealersCards into numerical values
     dealersScore = getDealersScore();
+    //reveal the dealers total score
     dealersScoreTotal = showDealersScore();
+    //change status will reveal who won or lost or if it was a draw at the top of screen
     changeStatus();
+    //Hit button will be disabled, so user will not be able to deal another card
     hitButton.disabled = true;
+    //deal button will be active, so user can press deal once dealers turn is over
     dealButton.disabled = false;
+    //the card hit sound will be active
     hitSound.play();
+    //will wait 700 ms until while loop loops again
     await sleep(700);
   }
+
   var winner = determineWinner();
   showWinner(winner);
   addToTable(winner);
 }
-
 //Function to randomise the values
 function randomCard() {
   const randomIndex = Math.floor(Math.random() * 13);
   return cardValues[randomIndex];
 }
 
-//Whenever the HIT button is clicked a card will be shown
+//Whenever the HIT button is clicked a card image will be shown
 function gameCardImagePlayer(gameCard) {
-  //create a section within the player's box so the image can be shown within the box
+  //creates a section within the player's box so the image can be shown within the box
   let cardImage = document.createElement('img');
   //the gameCard will match the name of the png and that card will show on the board
   cardImage.src = `assets/images/PNG/${gameCard}.png`;
   document.querySelector('#players-box').appendChild(cardImage);
 }
 
-//Whenever the HIT button is clicked a card will be shown
+//Whenever the STAY button is clicked a card will be shown
 function gameCardImageDealer(gameCard) {
-  //create a section within the player's box so the image can be shown within the box
+  //create a section within the dealer's box so the image can be shown within the box
   let cardImage = document.createElement('img');
   //the gameCard will match the name of the png and that card will show on the board
   cardImage.src = `assets/images/PNG/${gameCard}.png`;
@@ -152,7 +163,7 @@ function dealButtonFunc() {
   let playersCardImages = document.querySelector("#players-box").querySelectorAll('img');
   let dealersCardImages = document.querySelector("#dealers-box").querySelectorAll('img');
 
-  //for loop to remove all of the images within the boxes
+  //for loop to remove all of the images within the boxes at once
   //remove the images within the players box
   for (i = 0; i < playersCardImages.length; i++) {
     playersCardImages[i].remove();
@@ -162,11 +173,11 @@ function dealButtonFunc() {
     dealersCardImages[j].remove();
   }
 
-  //players and dealers cards to reset 
+  //players and dealers cards to reset to none
   playersCards = [];
   dealersCards = [];
 
-  //total score counter to reset
+  //total score counter to reset to 0
   playersScoreTotal = 0;
   dealersScoreTotal = 0;
 
@@ -178,13 +189,15 @@ function dealButtonFunc() {
   document.querySelector("#players-result").style.color = "white";
   document.querySelector("#dealers-result").style.color = "white";
 
+  //the above status will revert back to Let's play
   document.querySelector("#blackjack-result").innerHTML = "Let's play";
   document.querySelector("#blackjack-result").style.color = "white";
 
+  //the Hit button will be active to initiate the players next round of cards
   hitButton.disabled = false;
 }
 
-//get the players score
+//get the players score that converts the string to numeric values
 function getPlayersScore() {
   var convertedArray = [];
   //convert the playersCards array items to numeric values 
@@ -196,6 +209,7 @@ function getPlayersScore() {
   return convertedArray;
 }
 
+//get dealers score that converts the string to numeric values
 function getDealersScore() {
   var convertedArray = [];
   //convert the playersCards array items to numeric values 
@@ -207,7 +221,7 @@ function getDealersScore() {
   return convertedArray;
 }
 
-//function to convert the cardValues to the numerical value
+//function to convert the cardValues from a string to a numeric value that will be added to the score
 function getCardNumericValue(toConvertCard) {
   if (toConvertCard === 'Ace') {
     return 1;
@@ -243,6 +257,7 @@ function showPlayersScore() {
   return playersScore.reduce(getSum, 0);
 }
 
+//function to display the dealersscore sum to the HTML span tag
 function showDealersScore() {
   document.getElementById("dealers-result").innerHTML = dealersScore.reduce(getSum, 0);
   return dealersScore.reduce(getSum, 0);
@@ -256,7 +271,6 @@ function changeStatus() {
     document.querySelector("#players-result").style.color = 'Red';
     //change score text to Bust
     document.querySelector("#players-result").innerHTML = 'BUST!';
-
     //if score is equal to 21 change color to green to indicate 21 has been reached
   } else if (playersScoreTotal === 21) {
     document.querySelector("#players-result").style.color = '#45fc03';
@@ -269,7 +283,6 @@ function changeStatus() {
     document.querySelector("#dealers-result").style.color = 'Red';
     //change score text to Bust
     document.querySelector("#dealers-result").innerHTML = 'BUST!';
-
     //if score is equal to 21 change color to green
   } else if (dealersScoreTotal === 21) {
     document.querySelector("#dealers-result").style.color = '#45fc03';
@@ -293,9 +306,8 @@ function determineWinner() {
   return winner;
 }
 
-//display the winner in the blackjack-result span
+//displays the winner in the blackjack-result span and updates the text and color
 function showWinner(winner) {
-
   if (winner === "playerWins") {
     document.querySelector("#blackjack-result").style.color = '#45fc03';
     document.querySelector("#blackjack-result").innerHTML = 'YOU WON';
@@ -310,7 +322,7 @@ function showWinner(winner) {
   }
 }
 
-//incremeant the table by 1 by who the winner of the round was
+//increment the table scores by 1 by who the winner of the round was
 function addToTable(winner) {
   if (winner === "playerWins") {
     document.querySelector("#wins").innerHTML++;
