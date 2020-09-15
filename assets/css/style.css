@@ -5,18 +5,32 @@ html,
 body {
     margin: 0;
     padding: 0;
-    width: 100%;
 }
 
 html {
     min-height: 100%;
+    min-width: 100%;
 }
 
 body {
     height: 100%;
+    width: 100%;
     /* -- Set to important to overwrite bootstrap default white background -- */
     background-color: #006802 !important;
 }
+
+#landscape_warning {
+    text-align: center;
+    font-size: 25px;
+    background-color:rgb(211,211,211, .9);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    padding: 15%;
+    position: fixed;
+    display: none;
+}
+
 
 /* ------ title container ----- */
 #title-container {
@@ -66,8 +80,7 @@ body {
   display: none;
   z-index: 1; 
   background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0,0.4);
-    
+  background-color: rgba(0,0,0,0.4);   
 }
 
 /* Modal Content/Box */
@@ -160,7 +173,7 @@ body {
     padding: 0;
     margin: 0 auto;
 }
-
+ 
 table, th, td{
     padding: 10px;
     border: 1px solid white;
@@ -240,51 +253,132 @@ table, th, td{
     }
 }
 
-/* Extra small devices (400px to 600px) */
-@media only screen and (min-width: 401px) and (max-width: 600px) {
+@media screen and (min-width: 280px) and (max-width: 599px) and (orientation:landscape) {
 
-    /* -- title container header text -- */
     #header-text {
-        font-size: 40px;
-    }
-
-    /* -- title screen buttons -- */
-    #btnStart,
-    #btnInstruct {
-        font-size: 14px;
-    }
-
-    #modal-h2 {
-        /* -- instructions header font size -- */
         font-size: 20px;
     }
 
-    .modal-content>p,
-    .modal-content>ol {
-        font-size: 15px;
+    #btnStart,
+    #btnInstruct {
+        font-size: 12px;
     }
 
-    /* -- header texts for each section -- */
+    .modal-content {
+        margin-top: 1%;
+        margin-bottom: 2%;
+        padding: 1% 18%;
+    }
+
+    #modal-h2 {
+        font-size: 22px;
+    }
+    
+    .modal-content>p,
+    .modal-content>ol {
+        font-size: 10px;
+    }
+
     .modal-content>h4 {
+        font-size: 16px;
+        padding: 2% 1%;
+    }
+
+    #game-container {
+        /* -- Margin centers the whole container --- */
+        margin: 2% auto;
+    }
+
+    .game-section{
+        /* -- height of the container --- */
+        height: 120px;
+    }
+     
+    #players-box, 
+    #dealers-box {
+        /* -- height of the individual playing sections -- */
+        height: 30px;
+        padding: 0;
+    }
+
+    #blackjack-result {
         font-size: 16px;
     }
 
-    /* Modal Content/Box */
-    .modal-content {
-        margin-top: 8%;
-        /* -- width of the content -- */
-        padding: 4%;
-    }
-    
-    #game-container {
-        /* -- Margin centers the whole container --- */
-        margin-top: 10%;
-        margin-bottom: 8%;
-        padding: 2% 0;
+    #players-box>h2,
+    #dealers-box>h2 {
+        font-size: 16px;
     }
 
-    .game-section {
-        height: 250px;
+    .game-section img {
+        /* --- Controls size of the img --- */
+        width: 15%;
+        padding: 1%;
+    }
+
+    .controls-section button {
+        /* --- font size of button text --- */
+        font-size: 10px;
+    }
+
+    .controls-section div {
+        /* --- controls white background padding --- */
+        padding: 1%;
+    }
+
+    table, th, td {
+        /* --- controls size of table--- */
+        padding: 2px;
+        font-size: 10px;
+    }
+
+}
+
+@media screen and (min-width: 600px) and (max-width: 850px) and (orientation:landscape) {
+
+
+    #header-text {
+        font-size: 30px;
+    }
+
+    #btnStart,
+    #btnInstruct {
+        font-size: 12px;
+    }
+
+    .modal-content {
+        margin-top: 2%;
+        padding: 1% 30%;
+    }
+
+    #modal-h2 {
+        font-size: 22px;
+    }
+    
+    .modal-content>p,
+    .modal-content>ol {
+        font-size: 10px;
+    }
+    .modal-content>h4 {
+        font-size: 16px;
+        padding: 2% 1%;
+    }
+
+    #game-container {
+        /* -- Margin centers the whole container --- */
+        margin: 2% auto;
+    }
+
+    .game-section{
+        /* -- height of the container --- */
+        height: 140px;
+    }
+     
+    #players-box, 
+    #dealers-box {
+        /* -- height of the individual playing sections -- */
+        height: 40px;
+        padding: 0;
     }
 
     #blackjack-result {
@@ -298,181 +392,25 @@ table, th, td{
 
     .game-section img {
         /* --- Controls size of the img --- */
-        width: 25%;
+        width: 14%;
         padding: 1%;
     }
 
     .controls-section button {
         /* --- font size of button text --- */
-        font-size: 12px;
+        font-size: 10px;
     }
 
     .controls-section div {
         /* --- controls white background padding --- */
-        padding: 10px;
+        padding: 8px;
     }
 
     table, th, td {
         /* --- controls size of table--- */
-        padding: 5px;
-        font-size: 12px;
-    }
-}
-
-/* Medium devices (600px to 850x) */
-@media only screen and (min-width: 601px) and (max-width: 800px) {
-
-        /* -- title container header text -- */
-        #header-text {
-            font-size: 40px;
-        }
-    
-        /* -- title screen buttons -- */
-        #btnStart,
-        #btnInstruct {
-            font-size: 14px;
-        }
-    
-        #modal-h2 {
-            /* -- instructions header font size -- */
-            font-size: 20px;
-        }
-    
-        .modal-content>p,
-        .modal-content>ol {
-            font-size: 15px;
-        }
-    
-        /* -- header texts for each section -- */
-        .modal-content>h4 {
-            font-size: 16px;
-        }
-    
-        /* Modal Content/Box */
-        .modal-content {
-            margin-top: 12%;
-            /* -- width of the content -- */
-            padding: 3% 18%;
-        }
-        
-        #game-container {
-            /* -- Margin centers the whole container --- */
-            margin-top: 8%;
-            margin-bottom: 6%;
-            padding: 2% 0;
-        }
-    
-        .game-section {
-            height: 220px;
-        }
-    
-        #blackjack-result {
-            font-size: 22px;
-        }
-    
-        #players-box>h2,
-        #dealers-box>h2 {
-            font-size: 20px;
-        }
-    
-        .game-section img {
-            /* --- Controls size of the img --- */
-            width: 22%;
-            padding: 1%;
-        }
-    
-        .controls-section button {
-            /* --- font size of button text --- */
-            font-size: 12px;
-        }
-    
-        .controls-section div {
-            /* --- controls white background padding --- */
-            padding: 10px;
-        }
-    
-        table, th, td {
-            /* --- controls size of table--- */
-            padding: 5px;
-            font-size: 12px;
-        }
-}
-
-/* Medium devices (600px to 850x) */
-@media only screen and (min-width: 801px) and (max-width: 900px) {
-
-    /* -- title container header text -- */
-    #header-text {
-        font-size: 40px;
-    }
-
-    /* -- title screen buttons -- */
-    #btnStart,
-    #btnInstruct {
-        font-size: 14px;
-    }
-
-    #modal-h2 {
-        /* -- instructions header font size -- */
-        font-size: 20px;
-    }
-
-    .modal-content>p,
-    .modal-content>ol {
-        font-size: 15px;
-    }
-
-    /* -- header texts for each section -- */
-    .modal-content>h4 {
-        font-size: 16px;
-    }
-
-    /* Modal Content/Box */
-    .modal-content {
-        margin-top: 10%;
-        /* -- width of the content -- */
-        padding: 3% 20%;
-    }
-    
-    #game-container {
-        /* -- Margin centers the whole container --- */
-        margin-top: 8%;
-        margin-bottom: 6%;
-        padding: 2% 0;
-    }
-
-    .game-section {
-        height: 220px;
-    }
-
-    #blackjack-result {
-        font-size: 22px;
-    }
-
-    #players-box>h2,
-    #dealers-box>h2 {
-        font-size: 20px;
-    }
-
-    .game-section img {
-        /* --- Controls size of the img --- */
-        width: 22%;
-        padding: 1%;
-    }
-
-    .controls-section button {
-        /* --- font size of button text --- */
+        padding: 2px;
         font-size: 12px;
     }
 
-    .controls-section div {
-        /* --- controls white background padding --- */
-        padding: 10px;
-    }
-
-    table, th, td {
-        /* --- controls size of table--- */
-        padding: 5px;
-        font-size: 12px;
-    }
 }
+
