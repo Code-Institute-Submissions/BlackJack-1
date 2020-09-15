@@ -23,11 +23,16 @@ Source: Google Fonts
 
 ## Wireframes 
 * The wireframes for the initial layout of the webiste was created using [Adobe XD](https://www.adobe.com/uk/products/xd.html). 
-[Title Screen](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Starting%20Page.png)
 
-[Instructions](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Instructions.png)
+#### Title Screen
+<div align="center">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/wireframes/Starting%20Page.png" width="500">
+</div>
 
-[Main Game](https://github.com/aprilha3097/BlackJack/blob/master/mockups/Game.png)
+#### Main Game
+<div align="center">
+<img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/wireframes/Game.png" width="500">
+</div>
 
 ## MockUp / Final Designs
 * The final mockups were created using [Adobe XD](https://www.adobe.com/uk/products/xd.html).
@@ -49,25 +54,30 @@ Source: Google Fonts
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="300">        <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="300">
 </div>
 
-## User Stories: 
-* As a user, I want a start button to initialise the game
-* As a user, I want to reset the game whenever I want
-* As a user, I want to have options to Stay or Bet, so that I can decide my next move
-* As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
-* As a user, I want to know who has one that round
-* As a user, I want to know where I am in terms of winning and lossing
+## User Stories and Existing Features: 
 
-## Features
-### Exitisting Features 
-* User will first enter site through the title screen - here user will be able to press Play for How to for further instructions
-* User is able to read instructions on how to further play the game with basic details to the game of blackjack
-* When user presses Hit a card will be dealt. User will have to continue to press Hit until they are satisifed with their position. 
-* User will not longer be able to press Hit once 21 has been reached or they have busted, gone over 21
-* When user presses Stay, this ends their turn. User will no longer be able to press Hit
-* When Stay is activiated, the dealers cards will all be dealt 
-* Score will automactially update once dealers turn is over - indicated by the above text and the below table 
-* User will then need to press Deal in order to reset the game, but scores in the below table remain
-
+#### As a user, I want a start button to initialise the game
+* The site will first load the title screen. User will be given two options to Start the game or to read the instructions on how to play
+* Pressing the Start button will intialise the game and enter the main game section
+#### As a user, I want to reset the game whenever I want
+* Once a round of the game has been completed the game board will need to be cleared for the next round
+* If player has 'Hit' and then pressed 'Stay', the 'Deal' button will be active
+* Once player goes through the steps of the round 'Deal' button will be active, once selected the card images will be removed, the score will revert to 0 and the status of the game will go back to 'Let's Play'
+#### As a user, I want to have options to Stay or Bet, so that I can decide my next move
+* When user starts game, player will be given options to Hit of Stay. 
+* In order for the players cards to be dealt, player will press Hit
+* If player has completed their turn they will press Stay
+* Pressing Stay will initiate the dealers cards to be dealt
+* Player will no longer be able to press Hit once Stay has been clicked
+#### As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
+* For every card that is dealt the total calue of the card will be presented for the player and dealer
+* When user hits 21, no more cards can be dealt and 21 is highlighted in green
+* When user busts, no more cards can be dealt and the value will change to BUST! in red
+#### As a user, I want to know who has one that round
+* Once Stay has been clicked and dealers hand is dealt, the top status will change to Player has won, lost of no winner meaning there was a draw
+* The below table will be updated depending on win lose of draw status for that round
+#### As a user, I want to know where I am in terms of winning and lossing
+* The table will be updated with how many wins losses and draws collected from all of the rounds
 
 ### Features to be implemented 
 * Backend logic of the Ace card should either be 1 or 11. In real Blackjack, Ace can either be 1 or 11 depending on the users choice of where they curently stand in the game. The logic to do this is still in progress, so this is yet to be implemented within the application. 
