@@ -19,19 +19,6 @@ body {
     background-color: #006802 !important;
 }
 
-#landscape_warning {
-    text-align: center;
-    font-size: 25px;
-    background-color:rgb(211,211,211, .9);
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    padding: 15%;
-    position: fixed;
-    display: none;
-}
-
-
 /* ------ title container ----- */
 #title-container {
     position: absolute;
@@ -181,78 +168,6 @@ table, th, td{
 
 /* --- Media Queries --- */ 
 
-/* Extra small devices (0 to 400px) */
-@media only screen and (max-width: 400px) {
-    
-    #header-text {
-        font-size: 25px;
-    }
-
-    #btnStart,
-    #btnInstruct {
-        font-size: 10px;
-    }
-
-    .modal-content {
-        margin: 20% auto;
-        padding: 2% 12%;
-    }
-
-    #modal-h2 {
-        font-size: 20px;
-    }
-    
-    .modal-content>p,
-    .modal-content>ol {
-        font-size: 10px;
-    }
-    .modal-content>h4 {
-        font-size: 16px;
-        padding: 2% 1%;
-    }
-
-    #game-container {
-        /* -- Margin centers the whole container --- */
-        margin-top: 16%;
-        padding: 2% 0;
-    }
-
-    .game-section {
-        height: 240px;
-    }
-
-    #blackjack-result {
-        font-size: 18px;
-    }
-
-    #players-box>h2,
-    #dealers-box>h2 {
-        font-size: 20px;
-    }
-
-    .game-section img {
-        /* --- Controls size of the img --- */
-        width: 25%;
-        padding: 1%;
-    }
-
-    .controls-section button {
-        /* --- font size of button text --- */
-        font-size: 12px;
-    }
-
-    .controls-section div {
-        /* --- controls white background padding --- */
-        padding: 10px;
-    }
-
-    table, th, td {
-        /* --- controls size of table--- */
-        padding: 5px;
-        font-size: 12px;
-    }
-}
-
 @media screen and (min-width: 280px) and (max-width: 599px) and (orientation:landscape) {
 
     #header-text {
@@ -331,11 +246,9 @@ table, th, td{
         padding: 2px;
         font-size: 10px;
     }
-
 }
 
 @media screen and (min-width: 600px) and (max-width: 850px) and (orientation:landscape) {
-
 
     #header-text {
         font-size: 30px;
@@ -411,6 +324,5 @@ table, th, td{
         padding: 2px;
         font-size: 12px;
     }
-
 }
 
