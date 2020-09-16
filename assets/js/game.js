@@ -64,6 +64,7 @@ document.querySelector("#btnDeal").addEventListener('click', dealButtonFunc);
 
 //define the buttons
 let hitButton = document.getElementById("btnHit");
+let stayButton = document.getElementById("btnStay");
 let dealButton = document.getElementById("btnDeal");
 
 //if user presses Hit, users cards will be dealt
@@ -95,7 +96,9 @@ function hitButtonFunc() {
 //if player busts than dealers hand is drawn immediately without user having to press stay
 function playerBusted() {
   if(playersScoreTotal > 21) {
-    stayButtonFunc()
+    stayButtonFunc();
+    //stay button it be disabled, so user will should not be pressing as dealers turn is automatically going
+    stayButton.disabled = true;
   };
 }
 
@@ -202,6 +205,8 @@ function dealButtonFunc() {
 
   //the Hit button will be active to initiate the players next round of cards
   hitButton.disabled = false;
+  //if player busts stay button is disabled, so this activates it again once deal is pressed
+  stayButton.disabled = false;
 }
 
 //get the players score that converts the string to numeric values
@@ -299,17 +304,22 @@ function changeStatus() {
 //logic to determine who has won each of the rounds
 function determineWinner() {
   var winner;
+    //if players score is greater than 21 and players score is less than or equal to 21
   if (playersScoreTotal > dealersScoreTotal && playersScoreTotal <= 21) {
     winner = "playerWins";
-  } else if (playersScoreTotal < dealersScoreTotal && dealersScoreTotal <= 21) {
+    //if players score is less than dealers score and dealers score is less than or equal to 21
+  }  else if (playersScoreTotal < dealersScoreTotal && dealersScoreTotal <= 21) {
     winner = "dealerWins";
+    //if players score and dealers score is the same and botha re equal to or less than 21
   } else if (playersScoreTotal === dealersScoreTotal && playersScoreTotal <= 21) {
     winner = "wasDraw";
+    //if players score is greater than 21
   } else if (playersScoreTotal > 21) {
     winner = "dealerWins";
+    //if dealers score is greater than 21 and players score is less than or equal to 21
   } else if (dealersScoreTotal > 21 && playersScoreTotal <= 21) {
     winner = "playerWins";
-  }
+  } 
   return winner;
 }
 
