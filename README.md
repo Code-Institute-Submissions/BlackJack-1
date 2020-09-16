@@ -91,6 +91,7 @@ Source: Google Fonts
 
 
 ### User Stories: 
+
 * As a user, I want a start button to initialise the game
 * As a user, I want to reset the game whenever I want
 * As a user, I want to have options to Stay or Bet, so that I can decide my next move
@@ -99,28 +100,29 @@ Source: Google Fonts
 * As a user, I want to know where I am in terms of winning and lossing
 
 ### Features: 
-* The site will first load the title screen. User will be given two options to Start the game or to read the instructions on how to play
+Title Screen: 
+* The site will first load the title screen. User will be given two options to Start the game or to read the instructions on How to Play
 * Pressing the Start button will intialise the game and enter the main game section
-* If player has 'Hit' and then pressed 'Stay', the 'Deal' button will be active
-* Once player goes through the steps of the round 'Deal' button will be active, once selected the card images will be removed, the score will revert to and the status of the game will go back to 'Let's Play'
-* Once a round of the game has been completed the game board will need to be cleared for the next round
-* When user starts game, player will be given options to Hit of Stay. 
-* In order for the players cards to be dealt, player will press Hit
-* If player has completed their turn they will press Stay
-* Pressing Stay will initiate the dealers cards to be dealt
-* Player will no longer be able to press Hit once Stay has been clicked
+* If player selects 'How to Play' a modal box will appear with the isntructions of the game
+
+Main Game: 
+* Player will have three buttons to 'Hit', 'Stay' or 'Deal'
+* Player needs to press 'Hit' to initiate the game by dealing the players cards
+* Once player has completed their turn, they will press 'Stay' to end their turn and initiaite the Dealers turn - 'Hit' button will be disabled
+* Once Dealers turn is over, user will need to press the 'Deal' button. Once selected the card images will be removed, the score will revert to 0 and the status of the game will go back to 'Let's Play'
 * For every card that is dealt the total calue of the card will be presented for the player and dealer
 * When user hits 21, no more cards can be dealt and 21 is highlighted in green
 * When user busts, no more cards can be dealt and the value will change to BUST! in red
-* Once Stay has been clicked and dealers hand is dealt, the top status will change to Player has won, lost of no winner meaning there was a draw
-* The below table will be updated depending on win lose of draw status for that round
+* Once Stay has been clicked and dealers hand is dealt, the top status will change to Player has won, lost or no winner meaning there was a draw
+* The below table will be updated depending on win, lose, or draw from that round
 * The table will be updated with how many wins losses and draws collected from all of the rounds
+* For each onclick of the 'Hit' button and for the Dealers cards being drawn a SFX of a card being drawn will play
+* For each time the player wins - a winning sound will play after dealers turn
+* For each time the player losses - a lossing sound will play after the dealers turn 
 
 ### Features to be implemented 
 * Backend logic of the Ace card should either be 1 or 11. In real Blackjack, Ace can either be 1 or 11 depending on the users choice of where they curently stand in the game. The logic to do this is still in progress, so this is yet to be implemented within the application. 
 * OR a prompt can be available for when an ACE card is drawn. User can choose between 1 or 11 to be the value they wanted added to their score. 
-* Adding sounds for each onclick of the buttons I would like to implement a card dealing sound for each card being dealt
-* Adding a music in the background onload of the application during the title screen
 * Add logic so when user goes Bust the dealers cards will get drawn immediately, as user does not need to "stay" as they have already lost
 
 ## Technologies Used
