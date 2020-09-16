@@ -5,7 +5,6 @@ let btnGameInstruct = document.getElementById("btnInstruct");
 let modal = document.getElementById("myModal");
 let span = document.getElementsByClassName("close")[0];
 let mainGame = document.getElementById("game-container");
-const titleMusic = new Audio ("assets/sounds/titleMusic.mp3");
 
 //hides the main game container for the title screen to be active
 mainGame.style.display = 'none';
@@ -86,9 +85,18 @@ function hitButtonFunc() {
     document.querySelector("#blackjack-result").innerHTML = "Let's Play";
     document.querySelector("#blackjack-result").style.color = "white";
     hitSound.play();
-  }  
+  } 
+  //if players score is over 21 / busted than the deal function will start immediately
+  playerBusted();
   //disables Deal button, so user will not be able to press while it is their turn
   dealButton.disabled = true;
+}
+
+//if player busts than dealers hand is drawn immediately without user having to press stay
+function playerBusted() {
+  if(playersScoreTotal > 21) {
+    stayButtonFunc()
+  };
 }
 
 //Code for async function to slow down the dealers hand reveals - idea from Clever Programmer - JavaScript Tutorial for Beginners[2020]
@@ -123,7 +131,7 @@ async function stayButtonFunc() {
     //the card hit sound will be active
     hitSound.play();
     //will wait 700 ms until while loop loops again
-    await sleep(700);
+    await sleep(800);
   }
   var winner = determineWinner();
   showWinner(winner);
