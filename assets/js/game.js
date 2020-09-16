@@ -99,7 +99,7 @@ function playerBusted() {
     stayButtonFunc();
     //stay button it be disabled, so user will should not be pressing as dealers turn is automatically going
     stayButton.disabled = true;
-  };
+  }
 }
 
 //Code for async function to slow down the dealers hand reveals - idea from Clever Programmer - JavaScript Tutorial for Beginners[2020]
