@@ -167,7 +167,6 @@ table, th, td{
 }
 
 /* --- Media Queries --- */ 
-
 @media screen and (min-width: 280px) and (max-width: 599px) and (orientation:landscape) {
 
     #header-text {
