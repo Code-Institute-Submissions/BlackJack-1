@@ -80,6 +80,15 @@ body {
     text-align: center;
 }
 
+.modal-content>p {
+    padding: 0 3%;
+}
+
+.modal-content>h4,
+.modal-content>ol {
+    padding-left: 10%;
+}
+
 /* The Close Button */
 .close {
   color: #aaa;
