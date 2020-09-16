@@ -89,7 +89,6 @@ Source: Google Fonts
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="300">        <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="300">
 </div>
 
-
 ### User Stories: 
 
 * As a user, I want a start button to initialise the game
@@ -100,6 +99,7 @@ Source: Google Fonts
 * As a user, I want to know where I am in terms of winning and lossing
 
 ### Features: 
+
 Title Screen: 
 * The site will first load the title screen. User will be given two options to Start the game or to read the instructions on How to Play
 * Pressing the Start button will intialise the game and enter the main game section
