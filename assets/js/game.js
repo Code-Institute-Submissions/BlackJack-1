@@ -316,7 +316,7 @@ function determineWinner() {
     //if players score is greater than 21
   } else if (playersScoreTotal > 21) {
     winner = "dealerWins";
-    //if dealers score is greater than 21 and players score is less than or equal to 21
+     //if dealers score is greater than 21 and players score is less than or equal to 21
   } else if (dealersScoreTotal > 21 && playersScoreTotal <= 21) {
     winner = "playerWins";
   } 
