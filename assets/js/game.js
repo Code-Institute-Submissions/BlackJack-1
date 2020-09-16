@@ -125,11 +125,11 @@ async function stayButtonFunc() {
     //will wait 700 ms until while loop loops again
     await sleep(700);
   }
-
   var winner = determineWinner();
   showWinner(winner);
   addToTable(winner);
 }
+
 //Function to randomise the values
 function randomCard() {
   const randomIndex = Math.floor(Math.random() * 13);
@@ -172,7 +172,6 @@ function dealButtonFunc() {
   for (j = 0; j < dealersCardImages.length; j++) {
     dealersCardImages[j].remove();
   }
-
   //players and dealers cards to reset to none
   playersCards = [];
   dealersCards = [];
