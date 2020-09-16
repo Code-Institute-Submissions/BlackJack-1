@@ -84,6 +84,8 @@ Source: Google Fonts
 </div>
 
 ### Mobile
+Mobile version is recommended to be used on a landscape mode.
+
 #### Title Screen and Main Game
 <div align="center">
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="300">        <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="300">
