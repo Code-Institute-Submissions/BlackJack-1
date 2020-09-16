@@ -121,11 +121,11 @@ Main Game:
 * For each onclick of the 'Hit' button and for the Dealers cards being drawn a SFX of a card being drawn will play
 * For each time the player wins - a winning sound will play after dealers turn
 * For each time the player losses - a lossing sound will play after the dealers turn 
+* If user busts, user will not need to press Stay to deal the dealers cards as cards will automatically dget drawn 
 
 ### Features to be implemented 
 * Backend logic of the Ace card should either be 1 or 11. In real Blackjack, Ace can either be 1 or 11 depending on the users choice of where they curently stand in the game. The logic to do this is still in progress, so this is yet to be implemented within the application
 * OR a prompt can be available for when an ACE card is drawn. User can choose between 1 or 11 to be the value they want added to their score
-* Add logic so when user goes Bust the dealers cards will get drawn immediately, as user does not need to "stay" as they have already lost
 
 ## Technologies Used
 
