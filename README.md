@@ -4,22 +4,48 @@ Milestone Project # 2 - Interactive Frontend Development
 
 Deployed Site: https://aprilha3097.github.io/BlackJack/
 
-Blackjack is a simple game of cards. I created this game to challenge my skillset adapting to the complex rules to playing the game blackjack. I created this application using HTML, CSS, Boostrap and Javascript. 
+Blackjack is a simple game of cards. I created this game to challenge my skillset adapting to the complex rules to playing the game blackjack. I created this site using HTML, CSS, Boostrap and Javascript. 
 
 <div align="center">
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile_responsive_example.png" width="600">
 </div>
 
-## UX
+## UX and Elements of User Experiences
+### Strategy
+This sites obejective is to produce somthing that is for people who enjoy the game of blackjack that can easily play at home or on a mobile device against a computer dealer. 
 
-## Design Choices
-### Colors
-Colors are a simple green background resembling the blackjack tables at casinos
+### Scope 
+Defines functional and content requirements
 
-### Fonts
-- [Cuprum](https://fonts.google.com/specimen/Cuprum?query=cupru)
+Functional Requirement: 
+* User able to read instructions and easily return back to the title screen prior to startin the game
+* Encourage users to choose specific buttons to correctly follow through the logic of the game
+    - Deal button will be disabled when it is users turn
+    - Hit button will be disabled when it is dealers turn
+    - Hit button will be active after User presses Deal to reset the game board
+* Total score will be presented for both the player and dealers card values at head of page
+* Once user or dealer goes hits 21 or goes over 21 and busts, no more cards will be dealt
+* Clicking Deal should clean board back to start of game
 
-Source: Google Fonts
+Content Requirements: 
+* For every backend radomised card value a front end card image will be produced
+
+### Structure
+
+Information Architecture 
+* Title screen - buttons are clearly labelled in middle of screen - text on the buttons clearly state what users are able to choose from
+* When user presses 'How to Play', the instructions will pop up on a seperate plane, user can press the 'X' or off of the modal to exit the instructions screen
+* The Start button will take users to the main game area once player is ready to play
+* User and dealers scores are both at 0 - indiciating a numerical value to be placed there
+* Status will change once both player and dealer have completed their turns to indicate winner or losser in clear text
+* Table at bottom clearly labelled with Wins, Losses and Draws for the users reference
+* As this is a card game, images of cards will represent their actual value
+* Buttons are clearly labelled - buttons that are not active/disabled will not be highlighted
+* For each card draw a sound effect to let users know what to expect
+* A positive or win sound for everytime the player wins
+* A negative or lose sound for everything the player losses
+
+### Skeleton 
 
 ## Wireframes 
 * The wireframes for the initial layout of the webiste was created using [Adobe XD](https://www.adobe.com/uk/products/xd.html). 
@@ -33,6 +59,16 @@ Source: Google Fonts
 <div align="center">
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/wireframes/Game.png" width="500">
 </div>
+
+
+## Design Choices
+### Colors
+Colors are a simple green background resembling the blackjack tables at casinos
+
+### Fonts
+- [Cuprum](https://fonts.google.com/specimen/Cuprum?query=cupru)
+
+Source: Google Fonts
 
 ## MockUp / Final Designs
 * The final mockups were created using [Adobe XD](https://www.adobe.com/uk/products/xd.html).
@@ -54,29 +90,30 @@ Source: Google Fonts
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="300">        <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="300">
 </div>
 
-## User Stories and Existing Features: 
+User Stories: 
+* As a user, I want a start button to initialise the game
+* As a user, I want to reset the game whenever I want
+* As a user, I want to have options to Stay or Bet, so that I can decide my next move
+* As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
+* As a user, I want to know who has one that round
+* As a user, I want to know where I am in terms of winning and lossing
 
-#### As a user, I want a start button to initialise the game
+Features: 
 * The site will first load the title screen. User will be given two options to Start the game or to read the instructions on how to play
 * Pressing the Start button will intialise the game and enter the main game section
-#### As a user, I want to reset the game whenever I want
-* Once a round of the game has been completed the game board will need to be cleared for the next round
 * If player has 'Hit' and then pressed 'Stay', the 'Deal' button will be active
-* Once player goes through the steps of the round 'Deal' button will be active, once selected the card images will be removed, the score will revert to 0 and the status of the game will go back to 'Let's Play'
-#### As a user, I want to have options to Stay or Bet, so that I can decide my next move
+* Once player goes through the steps of the round 'Deal' button will be active, once selected the card images will be removed, the score will revert to and the status of the game will go back to 'Let's Play'
+* Once a round of the game has been completed the game board will need to be cleared for the next round
 * When user starts game, player will be given options to Hit of Stay. 
 * In order for the players cards to be dealt, player will press Hit
 * If player has completed their turn they will press Stay
 * Pressing Stay will initiate the dealers cards to be dealt
 * Player will no longer be able to press Hit once Stay has been clicked
-#### As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
 * For every card that is dealt the total calue of the card will be presented for the player and dealer
 * When user hits 21, no more cards can be dealt and 21 is highlighted in green
 * When user busts, no more cards can be dealt and the value will change to BUST! in red
-#### As a user, I want to know who has one that round
 * Once Stay has been clicked and dealers hand is dealt, the top status will change to Player has won, lost of no winner meaning there was a draw
 * The below table will be updated depending on win lose of draw status for that round
-#### As a user, I want to know where I am in terms of winning and lossing
 * The table will be updated with how many wins losses and draws collected from all of the rounds
 
 ### Features to be implemented 
@@ -84,7 +121,6 @@ Source: Google Fonts
 * OR a prompt can be available for when an ACE card is drawn. User can choose between 1 or 11 to be the value they wanted added to their score. 
 * Adding sounds for each onclick of the buttons I would like to implement a card dealing sound for each card being dealt
 * Adding a music in the background onload of the application during the title screen
-* Fix responsivness of site for mobile view forcing site to be used horizontally on mobile view - this allows the card images to be more visable and larger
 * Add logic so when user goes Bust the dealers cards will get drawn immediately, as user does not need to "stay" as they have already lost
 
 ## Technologies Used
@@ -107,7 +143,7 @@ You can view more in depth of the testing done for this project in the following
 
 ## Deployment
 
-This project was developed using VIsual Studio Code and version control done using Git. 
+This project was developed using Visual Studio Code and version control done using Git. 
 The site has been deployed using Github Pages, which is sourced directly from my Master branch:
 https://aprilha3097.github.io/BlackJack/
 
@@ -145,10 +181,9 @@ For more information on cloning repositories, go [here](https://help.github.com/
 ## Credits 
 
 ### Music and Sound Effects 
-
-* The music for the introduction section: 
-"Carroll Park (Sting) - John Deley and the 41 Players"
-From - [Youtube Audio Library](https://studio.youtube.com/channel/UCMpUi4n6yKE9K8o_VYkM_jA/music?utm_campaign=upgrade&utm_medium=redirect&utm_source=%2Faudiolibrary%2Fmusic)
+* The sound effect for each card being drawn from: https://freesound.org/people/deathpie/sounds/19244/
+* The sound effect for if player wins round from: https://www.zapsplat.com
+* The sound effect for if player losses round from: https://www.zapsplat.com
 
 * Images of Deck of Cards: 
 http://acbl.mybigcommerce.com/52-playing-cards/
