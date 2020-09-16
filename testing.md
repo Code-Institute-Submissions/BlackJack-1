@@ -1,9 +1,9 @@
 ## Testing
-The below outlines the testing that was carried out for each of the major features of the site as well as manual testing of site responsivness of various browsers and devices. 
+The below outlines the testing that was carried out for each of the major features of the site as well as manual testing of site responsivness on various browsers and devices. 
 
 ### Code Validation
 
-- HTML - HTML markup has passed and no errors were found  using the [W3 Validator](https://validator.w3.org/)
+- HTML - HTML markup has passed and no errors were found using the [W3 Validator](https://validator.w3.org/)
 - CSS - CSS has been checked and no error has been found using the [Jigsaw W3 Validator](https://jigsaw.w3.org/css-validator/)
 - JavaScript - JavsScript has been checked with no errors, but with 25 warnings in regards to ES6 - [JSHint](https://jshint.com/) 
 
@@ -14,7 +14,7 @@ The below outlines the testing that was carried out for each of the major featur
 2. If user presses 'How to Play' the modal pops up with the instructions of the game
     3. User will be able to press the 'X' to exit the modal mode
     4. User will also be able to click off the modal to exit the modal mode
-5. When users click 'Start Game' the game will load
+5. When user clicks 'Start Game' the game will load
 
 ### Main Game
 1. Scores and table are all 0 and there are no images on board when first entering page
@@ -43,6 +43,8 @@ The below outlines the testing that was carried out for each of the major featur
     5. The below table will remain with the current score
 
 2. User will be able to continue to play until they no longer would like to play
+3. If user busts on their turn dealers card will automatically initiate without needing to click 'Stay'
+    1. The 'Stay' button will be disabled as the dealers cards are being dealt
 
 
 ### Responsive Design Testing 
@@ -66,12 +68,12 @@ The below is an overview of the responsive testing results from the above browse
 ### Bugs and Fixes
 
 #### Bug:
-    - Was unable to apply 52 card images to the card values as well as creating a simple logic to "shuffle" the deck.
+- Was unable to apply 52 card images to the card values as well as creating a simple logic to "shuffle" the deck.
 #### Fix Applied: 
-    - Instead, to simplfy the coding and the logic, I instead used fixed card images of the 13 major values and randomized or "shuffled" through 13 rather than 52. 
+- Instead, to simplfy the coding and the logic, I instead used fixed card images of the 13 major values and randomized or "shuffled" through 13 rather than 52. 
 
 #### Bug:
-    - The card images are too small to view on mobile devices on portrait mode. 
-#### Fix Applied: 
-    - Used an externally created script to give warning/suggest to users to turn devices to landscape more for better viewing. 
-    - Other suggested solutions to fix/force the devices view to landscape in CSS was impractical or not UX smart. 
+- The card images are too small to view on mobile devices on portrait mode. 
+#### Fix Applied:
+- Used an externally created script to give warning/suggest to users to turn devices to landscape more for better viewing. 
+- Other suggested solutions to fix/force the devices view to landscape in CSS was impractical or not UX smart. 
