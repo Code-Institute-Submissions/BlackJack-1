@@ -98,7 +98,7 @@ Source: Google Fonts
 * As a user, I want to know who has one that round
 * As a user, I want to know where I am in terms of winning and lossing
 
-### User Stories:
+### Features:
 
 Title Screen: 
 * The site will first load the title screen. User will be given two options to Start the game or to read the instructions on How to Play
