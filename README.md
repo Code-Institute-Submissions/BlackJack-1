@@ -47,25 +47,24 @@ Information Architecture
 
 ### Skeleton 
 
-## Wireframes 
+#### Wireframes 
 * The wireframes for the initial layout of the webiste was created using [Adobe XD](https://www.adobe.com/uk/products/xd.html). 
 
-#### Title Screen
+##### Title Screen
 <div align="center">
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/wireframes/Starting%20Page.png" width="500">
 </div>
 
-#### Main Game
+##### Main Game
 <div align="center">
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/wireframes/Game.png" width="500">
 </div>
 
 
-## Design Choices
-### Colors
+#### Colors
 Colors are a simple green background resembling the blackjack tables at casinos
 
-### Fonts
+#### Fonts
 - [Cuprum](https://fonts.google.com/specimen/Cuprum?query=cupru)
 
 Source: Google Fonts
@@ -90,7 +89,8 @@ Source: Google Fonts
 <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_titleScreen.png" width="300">        <img src="https://github.com/aprilha3097/BlackJack/blob/master/mockups/mobile/mobile_mainGame.png" width="300">
 </div>
 
-User Stories: 
+
+### User Stories: 
 * As a user, I want a start button to initialise the game
 * As a user, I want to reset the game whenever I want
 * As a user, I want to have options to Stay or Bet, so that I can decide my next move
@@ -98,7 +98,7 @@ User Stories:
 * As a user, I want to know who has one that round
 * As a user, I want to know where I am in terms of winning and lossing
 
-Features: 
+### Features: 
 * The site will first load the title screen. User will be given two options to Start the game or to read the instructions on how to play
 * Pressing the Start button will intialise the game and enter the main game section
 * If player has 'Hit' and then pressed 'Stay', the 'Deal' button will be active
