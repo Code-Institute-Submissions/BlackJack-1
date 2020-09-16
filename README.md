@@ -12,38 +12,38 @@ Blackjack is a simple game of cards. I created this game to challenge my skillse
 
 ## UX and Elements of User Experiences
 ### Strategy
-This sites obejective is to produce somthing that is for people who enjoy the game of blackjack that can easily play at home or on a mobile device against a computer dealer. 
+
+This sites obejective is to produce something that is for people who enjoy the game of blackjack that can easily play at home or on a mobile device against a computer dealer. 
 
 ### Scope 
-Defines functional and content requirements
 
-Functional Requirement: 
-* User able to read instructions and easily return back to the title screen prior to startin the game
+Functional Requirements: 
+* User able to read instructions and easily return back to the title screen prior to starting the game
 * Encourage users to choose specific buttons to correctly follow through the logic of the game
     - Deal button will be disabled when it is users turn
     - Hit button will be disabled when it is dealers turn
-    - Hit button will be active after User presses Deal to reset the game board
-* Total score will be presented for both the player and dealers card values at head of page
-* Once user or dealer goes hits 21 or goes over 21 and busts, no more cards will be dealt
+    - Hit button will be active after user presses Deal to reset the game board
+* Total score will be presented for both the player and dealers card values at head of the page
+* Once user or dealer hits 21 or goes over 21 and busts, no more cards will be dealt
 * Clicking Deal should clean board back to start of game
 
 Content Requirements: 
-* For every backend radomised card value a front end card image will be produced
+* For every backend randomised card value a front end card image will be produced
 
 ### Structure
 
 Information Architecture 
-* Title screen - buttons are clearly labelled in middle of screen - text on the buttons clearly state what users are able to choose from
-* When user presses 'How to Play', the instructions will pop up on a seperate plane, user can press the 'X' or off of the modal to exit the instructions screen
+* Title screen - buttons are clearly labelled in the middle of the screen - text on the buttons clearly state what users are able to choose from
+* When user presses 'How to Play', the instructions appear on a modal window, user can press the 'X' or off of the modal to exit the instructions screen
 * The Start button will take users to the main game area once player is ready to play
-* User and dealers scores are both at 0 - indiciating a numerical value to be placed there
+* User and dealers scores are both at 0 - indiciating a numerical value to be updated
 * Status will change once both player and dealer have completed their turns to indicate winner or losser in clear text
-* Table at bottom clearly labelled with Wins, Losses and Draws for the users reference
+* Table at bottom clearly labelled with Wins, Losses and Draws for the users reference of their progress through the game
 * As this is a card game, images of cards will represent their actual value
 * Buttons are clearly labelled - buttons that are not active/disabled will not be highlighted
 * For each card draw a sound effect to let users know what to expect
 * A positive or win sound for everytime the player wins
-* A negative or lose sound for everything the player losses
+* A negative or lose sound for everytime the player losses
 
 ### Skeleton 
 
@@ -84,7 +84,7 @@ Source: Google Fonts
 </div>
 
 ### Mobile
-Mobile version is recommended to be used on a landscape mode.
+Mobile version is recommended to be used on a landscape mode. The script 'pleaserotate.min.js' will ask users to rotate screens on certain devices.
 
 #### Title Screen and Main Game
 <div align="center">
@@ -95,10 +95,10 @@ Mobile version is recommended to be used on a landscape mode.
 
 * As a user, I want a start button to initialise the game
 * As a user, I want to reset the game whenever I want
-* As a user, I want to have options to Stay or Bet, so that I can decide my next move
+* As a user, I want to have options to Stay or Bet, so thatI can have freedom in choice/options
 * As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
 * As a user, I want to know who has one that round
-* As a user, I want to know where I am in terms of winning and lossing
+* As a user, I want to know where I am in terms of winning and losing
 
 ### Features:
 
@@ -123,8 +123,8 @@ Main Game:
 * For each time the player losses - a lossing sound will play after the dealers turn 
 
 ### Features to be implemented 
-* Backend logic of the Ace card should either be 1 or 11. In real Blackjack, Ace can either be 1 or 11 depending on the users choice of where they curently stand in the game. The logic to do this is still in progress, so this is yet to be implemented within the application. 
-* OR a prompt can be available for when an ACE card is drawn. User can choose between 1 or 11 to be the value they wanted added to their score. 
+* Backend logic of the Ace card should either be 1 or 11. In real Blackjack, Ace can either be 1 or 11 depending on the users choice of where they curently stand in the game. The logic to do this is still in progress, so this is yet to be implemented within the application
+* OR a prompt can be available for when an ACE card is drawn. User can choose between 1 or 11 to be the value they want added to their score
 * Add logic so when user goes Bust the dealers cards will get drawn immediately, as user does not need to "stay" as they have already lost
 
 ## Technologies Used
@@ -185,17 +185,16 @@ For more information on cloning repositories, go [here](https://help.github.com/
 ## Credits 
 
 ### Music and Sound Effects 
-* The sound effect for each card being drawn from: https://freesound.org/people/deathpie/sounds/19244/
-* The sound effect for if player wins round from: https://www.zapsplat.com
-* The sound effect for if player losses round from: https://www.zapsplat.com
+* The sound effect for each card being drawn from [FreeSound.org](https://freesound.org/people/deathpie/sounds/19244/)
+* The sound effect for if player wins round from [ZapSplat](https://www.zapsplat.com)
+* The sound effect for if player losses round from [ZapSplat](https://www.zapsplat.com)
 
-* Images of Deck of Cards: 
-http://acbl.mybigcommerce.com/52-playing-cards/
+* Images of Deck of Cards sourceed from [ACBL](http://acbl.mybigcommerce.com/52-playing-cards/)
 
 ### Code Credits 
 1. The pop up modal for the instructions in the title screen was obtained from [W3Schools How To](https://www.w3schools.com/howto/howto_css_modals.asp)
 2. The code for the async function to delay the dealers hand function was obtained from the [Clever Programmer - Javascript Tutorial](https://www.youtube.com/watch?v=Qqx_wzMmFeA)
-3. The code to get the sum of an array of numbers obtainer from [W3Schools reduce() Method](https://www.w3schools.com/jsref/jsref_reduce.asp)
+3. The code to get the sum of an array of numbers was obtained from [W3Schools reduce() Method](https://www.w3schools.com/jsref/jsref_reduce.asp)
 4. [Stack Overflow](https://stackoverflow.com/) was a great resource for many difficult problems I've come across during the development of this page  
 5. For the animation to ask users to rotate device when on not desktop devices was obtained from [arscan / pleaserotate.js](https://github.com/arscan/pleaserotate.js)
 
@@ -205,6 +204,5 @@ http://acbl.mybigcommerce.com/52-playing-cards/
 - "JAVASCRIPT & JQUERY Interactive Front-end Web Development" by Jon Duckett
 - Colt Steel's [The Web Developer Bootcamp](https://www.udemy.com/course/the-web-developer-bootcamp/)
 - [W3Schools](https://www.w3schools.com/)
-
-
-
+- [Stack Overflow](https://stackoverflow.com/)
+- [Clever Programmer - Javascript Tutorial [2020]](https://www.youtube.com/watch?v=Qqx_wzMmFeA)
