@@ -94,9 +94,10 @@ Mobile version is recommended to be used on a landscape mode. The script 'please
 ### User Stories: 
 
 * As a user, I want a start button to initialise the game
+* As a user, I want to read instructions on how to play the game as well as the rules to Blackjack
+* As a user, I want to be able to press 'Hit' of 'Stay' to start and/or complete my hand
 * As a user, I want to reset the game board once the round has finished to continue to play
-* As a user, I want to be able to press 'Hit' of 'Stay' to start and complete my round
-* As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
+* As a user, I want to know how much my cards add up to, so that I don’t need to add up the total value myself
 * As a user, I want to know if I or the dealer has won the round after the dealers turn is complete
 * As a user, I want to see the summary of the rounds winnings and lossings in a table
 
