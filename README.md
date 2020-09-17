@@ -203,7 +203,7 @@ For more information on cloning repositories, go [here](https://help.github.com/
 
 The purpose of creating this game was to create something fun and simple for users to enjoy. Blackjack has been an enjoyable and yet simple game to play for me. The complexity to the games logic is what inspired me to pursuit this project. 
 
-This is my second project that I have developed from start to finish with the Code Institute course. I had difficulty in understanding the complexities to JavaScript, but had looked to many great resources to learn more in depth of this coding language.
+This is my second project that I have developed from start to finish with the Code Institute course. I had difficulty in understanding the complexities to JavaScript, but had looked to many great resources to learn more in depth of this coding language. I wish to further add on to this site by implementing the more complex JavaScript logic that I was unfortunately unable to do so now. 
 
 I want to thank my Code Institute mentor, Precious Ijege, who has been a great support and guide in the core development of this project.
 
