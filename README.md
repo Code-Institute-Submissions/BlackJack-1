@@ -94,11 +94,11 @@ Mobile version is recommended to be used on a landscape mode. The script 'please
 ### User Stories: 
 
 * As a user, I want a start button to initialise the game
-* As a user, I want to reset the game whenever I want
-* As a user, I want to have options to Stay or Bet, so thatI can have freedom in choice/options
+* As a user, I want to reset the game board once the round has finished to continue to play
+* As a user, I want to be able to press 'Hit' of 'Stay' to start and complete my round
 * As a user, I want to know how much my cards add up to, so that I don’t need to add up the total of my cards value myself
-* As a user, I want to know who has one that round
-* As a user, I want to know where I am in terms of winning and losing
+* As a user, I want to know if I or the dealer has won the round after the dealers turn is complete
+* As a user, I want to see the summary of the rounds winnings and lossings in a table
 
 ### Features:
 
@@ -162,7 +162,7 @@ https://aprilha3097.github.io/BlackJack/
 
 It can take up to 20 minutes for changes to the site to be published after pushing to GitHub. For more information on deploying your site with GitHub Pages, go [here](https://help.github.com/en/github/working-with-github-pages/creating-a-github-pages-site)
 
-#### Run this site locally
+#### How to Clone Porject
 
 1. On the [repository page](https://github.com/aprilha3097/BlackJack), click on the Clone or Download button
 
@@ -184,21 +184,29 @@ For more information on cloning repositories, go [here](https://help.github.com/
 
 ## Credits 
 
-### Music and Sound Effects 
+### Media
 * The sound effect for each card being drawn from [FreeSound.org](https://freesound.org/people/deathpie/sounds/19244/)
 * The sound effect for if player wins round from [ZapSplat](https://www.zapsplat.com)
 * The sound effect for if player losses round from [ZapSplat](https://www.zapsplat.com)
 
 * Images of Deck of Cards sourceed from [ACBL](http://acbl.mybigcommerce.com/52-playing-cards/)
 
-### Code Credits 
+### Content 
 1. The pop up modal for the instructions in the title screen was obtained from [W3Schools How To](https://www.w3schools.com/howto/howto_css_modals.asp)
 2. The code for the async function to delay the dealers hand function was obtained from the [Clever Programmer - Javascript Tutorial](https://www.youtube.com/watch?v=Qqx_wzMmFeA)
 3. The code to get the sum of an array of numbers was obtained from [W3Schools reduce() Method](https://www.w3schools.com/jsref/jsref_reduce.asp)
 4. [Stack Overflow](https://stackoverflow.com/) was a great resource for many difficult problems I've come across during the development of this page  
 5. For the animation to ask users to rotate device when on not desktop devices was obtained from [arscan / pleaserotate.js](https://github.com/arscan/pleaserotate.js)
 
-### Learning Resources 
+### Achknowledgments
+
+The purpose of creating this game was to create something fun and simple for users to enjoy. Blackjack has been an enjoyable and yet simple game to play for me. The complexity to the games logic is what inspired me to pursuit this project. 
+
+This is my second project that I have developed from start to finish with the Code Institute course. I had difficulty in understanding the complexities to JavaScript, but had looked to many great resources to learn more in depth of this coding language.
+
+I want to thank my Code Institute mentor, Precious Ijege, who has been a great support and guide in the core development of this project.
+
+#### Learning Resources
 - [Code Institute](https://codeinstitute.net/about-us/)
 - [CodeCademy](https://www.codecademy.com/)
 - "JAVASCRIPT & JQUERY Interactive Front-end Web Development" by Jon Duckett
