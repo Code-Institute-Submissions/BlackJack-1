@@ -59,6 +59,7 @@ body {
 #btnInstruct {
     padding: 3% 4%;
     margin: 1%;
+    font-size: 15px;
 }
 
 /* ----------------- The Modal (background) */
@@ -72,12 +73,13 @@ body {
 
 /* Modal Content/Box */
 .modal-content {
-  margin: 6% auto;
+  margin-top: 6%;
   padding: 2% 30%;
 }
 
 #modal-h2 {
     text-align: center;
+    font-size: 22px;
 }
 
 .modal-content>p {
@@ -182,19 +184,9 @@ table, th, td{
         font-size: 20px;
     }
 
-    #btnStart,
-    #btnInstruct {
-        font-size: 12px;
-    }
-
     .modal-content {
         margin-top: 1%;
-        margin-bottom: 2%;
         padding: 1% 18%;
-    }
-
-    #modal-h2 {
-        font-size: 22px;
     }
     
     .modal-content>p,
@@ -205,11 +197,6 @@ table, th, td{
     .modal-content>h4 {
         font-size: 16px;
         padding: 2% 1%;
-    }
-
-    #game-container {
-        /* -- Margin centers the whole container --- */
-        margin: 2% auto;
     }
 
     .game-section{
@@ -262,18 +249,10 @@ table, th, td{
         font-size: 30px;
     }
 
-    #btnStart,
-    #btnInstruct {
-        font-size: 12px;
-    }
-
     .modal-content {
         margin-top: 2%;
+        margin-bottom: 3%;
         padding: 1% 30%;
-    }
-
-    #modal-h2 {
-        font-size: 22px;
     }
     
     .modal-content>p,
@@ -283,11 +262,6 @@ table, th, td{
     .modal-content>h4 {
         font-size: 16px;
         padding: 2% 1%;
-    }
-
-    #game-container {
-        /* -- Margin centers the whole container --- */
-        margin: 2% auto;
     }
 
     .game-section{
@@ -333,4 +307,3 @@ table, th, td{
         font-size: 12px;
     }
 }
-
