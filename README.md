@@ -199,7 +199,7 @@ For more information on cloning repositories, go [here](https://help.github.com/
 4. [Stack Overflow](https://stackoverflow.com/) was a great resource for many difficult problems I've come across during the development of this page  
 5. For the animation to ask users to rotate device when on not desktop devices was obtained from [arscan / pleaserotate.js](https://github.com/arscan/pleaserotate.js)
 
-### Achknowledgments
+### Acknowledgements
 
 The purpose of creating this game was to create something fun and simple for users to enjoy. Blackjack has been an enjoyable and yet simple game to play for me. The complexity to the games logic is what inspired me to pursuit this project. 
 
